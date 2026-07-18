@@ -1,0 +1,146 @@
+{
+  "profiles": [
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "email": "testuser5@jeztbrain.com",
+      "role": "user",
+      "display_name": "Agent Alice",
+      "availability": "online",
+      "bio": "General security user",
+      "skills": [
+        "Reporting",
+        "Phishing awareness"
+      ],
+      "certifications": [],
+      "created_at": "2026-06-17T00:00:00Z"
+    },
+    {
+      "id": "223e4567-e89b-12d3-a456-426614174000",
+      "email": "testexpert@jeztbrain.com",
+      "role": "expert",
+      "display_name": "Hacker Bob (Specialist)",
+      "availability": "online",
+      "bio": "Incident Responder and Malware Analyst.",
+      "skills": [
+        "Malware Analysis",
+        "Forensics",
+        "Intrusion Detection"
+      ],
+      "certifications": [
+        "CEH",
+        "CISSP"
+      ],
+      "created_at": "2026-06-17T00:00:00Z"
+    },
+    {
+      "id": "323e4567-e89b-12d3-a456-426614174000",
+      "email": "admin@jeztbrain.com",
+      "role": "admin",
+      "display_name": "System Administrator",
+      "availability": "online",
+      "bio": "SOC Administrator",
+      "skills": [
+        "Management",
+        "Admin Panel"
+      ],
+      "certifications": [],
+      "created_at": "2026-06-17T00:00:00Z"
+    },
+    {
+      "id": "423e4567-e89b-12d3-a456-426614174000",
+      "email": "network@jeztbrain.com",
+      "role": "network_specialist",
+      "display_name": "NetSec Specialist",
+      "availability": "online",
+      "bio": "Network Security Analyst",
+      "skills": [
+        "Router configuration",
+        "Firewalls",
+        "Wireshark"
+      ],
+      "certifications": [
+        "CCNA Security"
+      ],
+      "created_at": "2026-06-17T00:00:00Z"
+    },
+    {
+      "id": "2e9974a1-2239-4632-98dd-d44e2abd54cb",
+      "email": "testuser@test.com",
+      "role": "user",
+      "display_name": "Test User",
+      "availability": "online",
+      "created_at": "2026-06-18T09:13:32.390Z"
+    },
+    {
+      "id": "de519078-2b0d-4ee6-96b2-1c83f79d57a2",
+      "email": "test_agent_1234@domain.com",
+      "role": "user",
+      "display_name": "Test Agent",
+      "availability": "online",
+      "created_at": "2026-06-19T13:28:26.946Z"
+    },
+    {
+      "id": "acbc896d-dfe1-490b-b835-afc65f4346db",
+      "email": "test@example.com",
+      "role": "user",
+      "display_name": "Test User",
+      "availability": "online",
+      "created_at": "2026-06-30T16:01:13.458Z"
+    },
+    {
+      "id": "7795be34-7a36-40f5-b620-a82ccc16bcf8",
+      "email": "agentzero@example.com",
+      "role": "network_specialist",
+      "display_name": "Agent Zero",
+      "availability": "online",
+      "created_at": "2026-06-30T16:13:50.520Z"
+    }
+  ],
+  "passwords": {
+    "testuser5@jeztbrain.com": "password123",
+    "testexpert@jeztbrain.com": "password123",
+    "admin@jeztbrain.com": "password123",
+    "network@jeztbrain.com": "password123",
+    "testuser@test.com": "testpassword",
+    "test_agent_1234@domain.com": "TestPassword123!",
+    "test@example.com": "password123",
+    "agentzero@example.com": "Admin123!"
+  },
+  "incidents": [
+    {
+      "id": "abc12345-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174000",
+      "incidenttype": "Phishing Attempt",
+      "severitylevel": "high",
+      "description": "Suspicious email targeting finance department requesting payroll wire transfer.",
+      "affectedsystems": "Finance Workstations",
+      "ticket_number": "INC-8891",
+      "status": "pending",
+      "expert_id": null,
+      "timeline": [],
+      "created_at": "2026-06-17T10:00:00Z",
+      "updated_at": "2026-06-17T10:00:00Z"
+    },
+    {
+      "id": "xyz98765-e89b-12d3-a456-426614174000",
+      "user_id": "123e4567-e89b-12d3-a456-426614174000",
+      "incidenttype": "Ransomware Alert",
+      "severitylevel": "critical",
+      "description": "Encrypted files detected on backup share. Ransom note left in root folder.",
+      "affectedsystems": "NAS-Backup-01",
+      "ticket_number": "INC-4452",
+      "status": "accepted",
+      "expert_id": "223e4567-e89b-12d3-a456-426614174000",
+      "timeline": [],
+      "created_at": "2026-06-17T11:00:00Z",
+      "updated_at": "2026-06-17T11:30:00Z"
+    }
+  ],
+  "messages": [],
+  "notifications": [],
+  "incident_activity_logs": [],
+  "expert_rewards": [],
+  "expert_payouts": [],
+  "expert_badges": [],
+  "ai_messages": []
+}

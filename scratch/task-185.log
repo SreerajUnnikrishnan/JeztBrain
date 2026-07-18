@@ -1,0 +1,1373 @@
+
+> jestbrain@0.0.0 lint
+> eslint .
+
+
+D:\JeztBrain\scratch\test_supabase.js
+  20:11  warning  'data' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\server\check_table.js
+  11:11  warning  'data' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\server\check_table_anon.js
+  10:11  warning  'data' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\server\controllers\chatController.js
+   1:10  warning  'supabaseAdmin' is defined but never used        no-unused-vars
+  10:44  warning  'receiverId' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\server\controllers\expertController.js
+  1:10  warning  'supabaseAdmin' is defined but never used  no-unused-vars
+
+D:\JeztBrain\server\controllers\incidentController.js
+  1:10  warning  'supabaseAdmin' is defined but never used  no-unused-vars
+
+D:\JeztBrain\server\test_supabase.js
+  19:11  warning  'data' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\server\test_supabase2.js
+  19:11  warning  'data' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\components\3D\AIBrainHero.jsx
+    1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+   13:36  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  11 |     const data = [];
+  12 |     for (let i = 0; i < particleCount; i++) {
+> 13 |       const edgeIndex = Math.floor(Math.random() * (lines.length / 6)) * 6;
+     |                                    ^^^^^^^^^^^^^ Cannot call impure function
+  14 |       data.push({
+  15 |         edgeIndex,
+  16 |         progress: Math.random(),                                react-hooks/purity
+   16:19  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  14 |       data.push({
+  15 |         edgeIndex,
+> 16 |         progress: Math.random(),
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+  17 |         speed: 0.002 + Math.random() * 0.006
+  18 |       });
+  19 |     }                                                                                                                                   react-hooks/purity
+   17:24  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  15 |         edgeIndex,
+  16 |         progress: Math.random(),
+> 17 |         speed: 0.002 + Math.random() * 0.006
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  18 |       });
+  19 |     }
+  20 |     return data;                                                                                                                               react-hooks/purity
+   74:22  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  72 |     
+  73 |     for (let i = 0; i < nodeCount; i++) {
+> 74 |       const isLeft = Math.random() > 0.5;
+     |                      ^^^^^^^^^^^^^ Cannot call impure function
+  75 |       const hemisphere = isLeft ? -1 : 1;
+  76 |       
+  77 |       const u = Math.random();                                                                                          react-hooks/purity
+   77:17  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  75 |       const hemisphere = isLeft ? -1 : 1;
+  76 |       
+> 77 |       const u = Math.random();
+     |                 ^^^^^^^^^^^^^ Cannot call impure function
+  78 |       const v = Math.random();
+  79 |       const theta = 2 * Math.PI * u;
+  80 |       const phi = Math.acos(2 * v - 1);                                                                            react-hooks/purity
+   78:17  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  76 |       
+  77 |       const u = Math.random();
+> 78 |       const v = Math.random();
+     |                 ^^^^^^^^^^^^^ Cannot call impure function
+  79 |       const theta = 2 * Math.PI * u;
+  80 |       const phi = Math.acos(2 * v - 1);
+  81 |                                                                                                                      react-hooks/purity
+   82:23  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  80 |       const phi = Math.acos(2 * v - 1);
+  81 |       
+> 82 |       const r = 2.4 + Math.random() * 0.4;
+     |                       ^^^^^^^^^^^^^ Cannot call impure function
+  83 |       let x = r * Math.sin(phi) * Math.cos(theta);
+  84 |       let y = r * Math.sin(phi) * Math.sin(theta);
+  85 |       let z = r * Math.cos(phi);                                 react-hooks/purity
+  123:25  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  121 |     const dataPos = new Float32Array(200 * 3);
+  122 |     for (let i = 0; i < 200; i++) {
+> 123 |       dataPos[i * 3] = (Math.random() - 0.5) * 8;
+      |                         ^^^^^^^^^^^^^ Cannot call impure function
+  124 |       dataPos[i * 3 + 1] = (Math.random() - 0.5) * 8;
+  125 |       dataPos[i * 3 + 2] = (Math.random() - 0.5) * 8;
+  126 |     }  react-hooks/purity
+  124:29  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  122 |     for (let i = 0; i < 200; i++) {
+  123 |       dataPos[i * 3] = (Math.random() - 0.5) * 8;
+> 124 |       dataPos[i * 3 + 1] = (Math.random() - 0.5) * 8;
+      |                             ^^^^^^^^^^^^^ Cannot call impure function
+  125 |       dataPos[i * 3 + 2] = (Math.random() - 0.5) * 8;
+  126 |     }
+  127 |                                             react-hooks/purity
+  125:29  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  123 |       dataPos[i * 3] = (Math.random() - 0.5) * 8;
+  124 |       dataPos[i * 3 + 1] = (Math.random() - 0.5) * 8;
+> 125 |       dataPos[i * 3 + 2] = (Math.random() - 0.5) * 8;
+      |                             ^^^^^^^^^^^^^ Cannot call impure function
+  126 |     }
+  127 |     
+  128 |     return [new Float32Array(pos), new Float32Array(linePts), dataPos];    react-hooks/purity
+
+D:\JeztBrain\src\components\3D\AIOrb3D.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\3D\CyberGlobe.jsx
+    1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+    8:19  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+   6 |   const nodes = Array.from({ length: 45 }).map((_, i) => {
+   7 |     // Generate points on a sphere
+>  8 |     const theta = Math.random() * Math.PI * 2;
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+   9 |     const phi = Math.acos(2 * Math.random() - 1);
+  10 |     
+  11 |     // Project to 2D            react-hooks/purity
+    9:31  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+   7 |     // Generate points on a sphere
+   8 |     const theta = Math.random() * Math.PI * 2;
+>  9 |     const phi = Math.acos(2 * Math.random() - 1);
+     |                               ^^^^^^^^^^^^^ Cannot call impure function
+  10 |     
+  11 |     // Project to 2D
+  12 |     const x = 50 + 45 * Math.sin(phi) * Math.cos(theta);  react-hooks/purity
+   16:18  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  14 |     const z = Math.cos(phi); // Depth for opacity/size
+  15 |     
+> 16 |     const size = Math.random() > 0.85 ? 'w-2 h-2' : 'w-1 h-1';
+     |                  ^^^^^^^^^^^^^ Cannot call impure function
+  17 |     const isRed = Math.random() > 0.95;
+  18 |     const delay = Math.random() * 5;
+  19 |                              react-hooks/purity
+   17:19  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  15 |     
+  16 |     const size = Math.random() > 0.85 ? 'w-2 h-2' : 'w-1 h-1';
+> 17 |     const isRed = Math.random() > 0.95;
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+  18 |     const delay = Math.random() * 5;
+  19 |     
+  20 |     return {                                                                  react-hooks/purity
+   18:19  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  16 |     const size = Math.random() > 0.85 ? 'w-2 h-2' : 'w-1 h-1';
+  17 |     const isRed = Math.random() > 0.95;
+> 18 |     const delay = Math.random() * 5;
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+  19 |     
+  20 |     return {
+  21 |       id: i,                                                          react-hooks/purity
+  127:33  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  125 |               }}
+  126 |               transition={{
+> 127 |                 duration: 1.5 + Math.random() * 2,
+      |                                 ^^^^^^^^^^^^^ Cannot call impure function
+  128 |                 repeat: Infinity,
+  129 |                 ease: "easeInOut",
+  130 |                 delay: node.delay         react-hooks/purity
+
+D:\JeztBrain\src\components\3D\Hero3D.jsx
+   15:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+   15:34  warning  'Suspense' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           no-unused-vars
+   56:25  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  54 |     const arr = new Float32Array(nodeCount * 3);
+  55 |     for (let i = 0; i < nodeCount; i++) {
+> 56 |       arr[i * 3]     = (Math.random() - 0.5) * 9;
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  57 |       arr[i * 3 + 1] = (Math.random() - 0.5) * 9;
+  58 |       arr[i * 3 + 2] = (Math.random() - 0.5) * 9;
+  59 |     }    react-hooks/purity
+   57:25  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  55 |     for (let i = 0; i < nodeCount; i++) {
+  56 |       arr[i * 3]     = (Math.random() - 0.5) * 9;
+> 57 |       arr[i * 3 + 1] = (Math.random() - 0.5) * 9;
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  58 |       arr[i * 3 + 2] = (Math.random() - 0.5) * 9;
+  59 |     }
+  60 |     return arr;                                     react-hooks/purity
+   58:25  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  56 |       arr[i * 3]     = (Math.random() - 0.5) * 9;
+  57 |       arr[i * 3 + 1] = (Math.random() - 0.5) * 9;
+> 58 |       arr[i * 3 + 2] = (Math.random() - 0.5) * 9;
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  59 |     }
+  60 |     return arr;
+  61 |   }, [nodeCount]);                                                            react-hooks/purity
+  142:25  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  140 |     const arr = new Float32Array(count * 3);
+  141 |     for (let i = 0; i < count; i++) {
+> 142 |       arr[i * 3]     = (Math.random() - 0.5) * 60;
+      |                         ^^^^^^^^^^^^^ Cannot call impure function
+  143 |       arr[i * 3 + 1] = (Math.random() - 0.5) * 60;
+  144 |       arr[i * 3 + 2] = (Math.random() - 0.5) * 60;
+  145 |     }  react-hooks/purity
+  143:25  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  141 |     for (let i = 0; i < count; i++) {
+  142 |       arr[i * 3]     = (Math.random() - 0.5) * 60;
+> 143 |       arr[i * 3 + 1] = (Math.random() - 0.5) * 60;
+      |                         ^^^^^^^^^^^^^ Cannot call impure function
+  144 |       arr[i * 3 + 2] = (Math.random() - 0.5) * 60;
+  145 |     }
+  146 |     return arr;                               react-hooks/purity
+  144:25  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  142 |       arr[i * 3]     = (Math.random() - 0.5) * 60;
+  143 |       arr[i * 3 + 1] = (Math.random() - 0.5) * 60;
+> 144 |       arr[i * 3 + 2] = (Math.random() - 0.5) * 60;
+      |                         ^^^^^^^^^^^^^ Cannot call impure function
+  145 |     }
+  146 |     return arr;
+  147 |   }, [count]);                                                      react-hooks/purity
+
+D:\JeztBrain\src\components\3D\Hero3DBrain.jsx
+    1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+   15:31  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  13 |     for (let i = 0; i < particleCount; i++) {
+  14 |       data.push({
+> 15 |         edgeIndex: Math.floor(Math.random() * edgeCount) * 6,
+     |                               ^^^^^^^^^^^^^ Cannot call impure function
+  16 |         progress: Math.random(),
+  17 |         speed: 0.004 + Math.random() * 0.012,
+  18 |       });                                                                   react-hooks/purity
+   16:19  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  14 |       data.push({
+  15 |         edgeIndex: Math.floor(Math.random() * edgeCount) * 6,
+> 16 |         progress: Math.random(),
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+  17 |         speed: 0.004 + Math.random() * 0.012,
+  18 |       });
+  19 |     }                                                                                                                       react-hooks/purity
+   17:24  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  15 |         edgeIndex: Math.floor(Math.random() * edgeCount) * 6,
+  16 |         progress: Math.random(),
+> 17 |         speed: 0.004 + Math.random() * 0.012,
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  18 |       });
+  19 |     }
+  20 |     return data;                                                                                                                   react-hooks/purity
+  109:20  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  107 |     const pos = [];
+  108 |     for (let i = 0; i < nodeCount; i++) {
+> 109 |       const hemi = Math.random() > 0.5 ? 1 : -1;
+      |                    ^^^^^^^^^^^^^ Cannot call impure function
+  110 |       const u = Math.random(), v = Math.random();
+  111 |       const theta = 2 * Math.PI * u;
+  112 |       const phi   = Math.acos(2 * v - 1);                                              react-hooks/purity
+  110:17  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  108 |     for (let i = 0; i < nodeCount; i++) {
+  109 |       const hemi = Math.random() > 0.5 ? 1 : -1;
+> 110 |       const u = Math.random(), v = Math.random();
+      |                 ^^^^^^^^^^^^^ Cannot call impure function
+  111 |       const theta = 2 * Math.PI * u;
+  112 |       const phi   = Math.acos(2 * v - 1);
+  113 |       const r     = 2.0 + Math.random() * 0.45;                     react-hooks/purity
+  110:36  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  108 |     for (let i = 0; i < nodeCount; i++) {
+  109 |       const hemi = Math.random() > 0.5 ? 1 : -1;
+> 110 |       const u = Math.random(), v = Math.random();
+      |                                    ^^^^^^^^^^^^^ Cannot call impure function
+  111 |       const theta = 2 * Math.PI * u;
+  112 |       const phi   = Math.acos(2 * v - 1);
+  113 |       const r     = 2.0 + Math.random() * 0.45;  react-hooks/purity
+  113:27  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  111 |       const theta = 2 * Math.PI * u;
+  112 |       const phi   = Math.acos(2 * v - 1);
+> 113 |       const r     = 2.0 + Math.random() * 0.45;
+      |                           ^^^^^^^^^^^^^ Cannot call impure function
+  114 |       let x = r * Math.sin(phi) * Math.cos(theta);
+  115 |       let y = r * Math.sin(phi) * Math.sin(theta);
+  116 |       let z = r * Math.cos(phi);                 react-hooks/purity
+
+D:\JeztBrain\src\components\3D\NeuralBrainSVG.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\AI\AIResponderWidget.jsx
+    1:8    warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 no-unused-vars
+    3:80   warning  'Trash2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+    3:99   warning  'Settings' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+    3:117  warning  'Headset' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+    3:126  warning  'FileText' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+    3:136  warning  'Target' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+   36:12   warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+   56:12   warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+   87:18   warning  'node' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  192:44   warning  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  190 | const MessageBubble = memo(({ msg, isHistoryView }) => {
+  191 |   const isAI = msg.sender_type === 'ai';
+> 192 |   const isNew = isAI && !isHistoryView && (Date.now() - new Date(msg.created_at).getTime() < 30000);
+      |                                            ^^^^^^^^^^ Cannot call impure function
+  193 |   const [streamFinished, setStreamFinished] = useState(!isNew);
+  194 |
+  195 |   return (                                                                                                                                                                                                                                                                        react-hooks/purity
+  259:24   warning  'isTyping' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+  363:9    warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  361 |       try {
+  362 |         const parsed = JSON.parse(saved);
+> 363 |         setDragPos(parsed);
+      |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  364 |         dragAnimControls.set(parsed);
+  365 |       } catch (e) {
+  366 |         // noop                      react-hooks/set-state-in-effect
+  365:16   warning  'e' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  405:9    warning  'rememberHistory' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+  443:7    warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  441 |   useEffect(() => {
+  442 |     if (isOpen) {
+> 443 |       setMessages([]);
+      |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  444 |       knownIdsRef.current.clear();
+  445 |       setUnreadCount(0);
+  446 |       setTimeout(() => inputRef.current?.focus(), 150);  react-hooks/set-state-in-effect
+  538:9    warning  'openHistory' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+
+D:\JeztBrain\src\components\AnimatedBackground.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+  11:12  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+   9 |       arr.push({
+  10 |         id: i,
+> 11 |         x: Math.random() * 100,
+     |            ^^^^^^^^^^^^^ Cannot call impure function
+  12 |         y: Math.random() * 100,
+  13 |         size: Math.random() * 1.5 + 0.6,
+  14 |         duration: Math.random() * 5 + 5, // Slow pulse duration                                                                                                    react-hooks/purity
+  12:12  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  10 |         id: i,
+  11 |         x: Math.random() * 100,
+> 12 |         y: Math.random() * 100,
+     |            ^^^^^^^^^^^^^ Cannot call impure function
+  13 |         size: Math.random() * 1.5 + 0.6,
+  14 |         duration: Math.random() * 5 + 5, // Slow pulse duration
+  15 |         delay: Math.random() * 5,                                                                                   react-hooks/purity
+  13:15  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  11 |         x: Math.random() * 100,
+  12 |         y: Math.random() * 100,
+> 13 |         size: Math.random() * 1.5 + 0.6,
+     |               ^^^^^^^^^^^^^ Cannot call impure function
+  14 |         duration: Math.random() * 5 + 5, // Slow pulse duration
+  15 |         delay: Math.random() * 5,
+  16 |       });                                                                                     react-hooks/purity
+  14:19  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  12 |         y: Math.random() * 100,
+  13 |         size: Math.random() * 1.5 + 0.6,
+> 14 |         duration: Math.random() * 5 + 5, // Slow pulse duration
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+  15 |         delay: Math.random() * 5,
+  16 |       });
+  17 |     }                                                                                                           react-hooks/purity
+  15:16  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  13 |         size: Math.random() * 1.5 + 0.6,
+  14 |         duration: Math.random() * 5 + 5, // Slow pulse duration
+> 15 |         delay: Math.random() * 5,
+     |                ^^^^^^^^^^^^^ Cannot call impure function
+  16 |       });
+  17 |     }
+  18 |     return arr;                                                                                                                              react-hooks/purity
+  35:38  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  33 |       }
+  34 |       distances.sort((a, b) => a.dist - b.dist);
+> 35 |       const connections = Math.floor(Math.random() * 2) + 1; // 1-2 connections per node
+     |                                      ^^^^^^^^^^^^^ Cannot call impure function
+  36 |       for (let k = 0; k < connections; k++) {
+  37 |         const targetId = distances[k].id;
+  38 |         const exists = l.find(line =>   react-hooks/purity
+  47:23  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  45 |             n1: nodes[i],
+  46 |             n2: nodes[targetId],
+> 47 |             duration: Math.random() * 6 + 6,
+     |                       ^^^^^^^^^^^^^ Cannot call impure function
+  48 |             delay: Math.random() * 4,
+  49 |           });
+  50 |         }                                                                                                                            react-hooks/purity
+  48:20  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  46 |             n2: nodes[targetId],
+  47 |             duration: Math.random() * 6 + 6,
+> 48 |             delay: Math.random() * 4,
+     |                    ^^^^^^^^^^^^^ Cannot call impure function
+  49 |           });
+  50 |         }
+  51 |       }                                                                                                                                                 react-hooks/purity
+  62:12  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  60 |       dust.push({
+  61 |         id: i,
+> 62 |         x: Math.random() * 100,
+     |            ^^^^^^^^^^^^^ Cannot call impure function
+  63 |         y: Math.random() * 100,
+  64 |         size: Math.random() * 1.8 + 0.8,
+  65 |         duration: Math.random() * 15 + 15,                                                                                                                        react-hooks/purity
+  63:12  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  61 |         id: i,
+  62 |         x: Math.random() * 100,
+> 63 |         y: Math.random() * 100,
+     |            ^^^^^^^^^^^^^ Cannot call impure function
+  64 |         size: Math.random() * 1.8 + 0.8,
+  65 |         duration: Math.random() * 15 + 15,
+  66 |         delay: Math.random() * 10,                                                                                                       react-hooks/purity
+  64:15  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  62 |         x: Math.random() * 100,
+  63 |         y: Math.random() * 100,
+> 64 |         size: Math.random() * 1.8 + 0.8,
+     |               ^^^^^^^^^^^^^ Cannot call impure function
+  65 |         duration: Math.random() * 15 + 15,
+  66 |         delay: Math.random() * 10,
+  67 |       });                                                                                                         react-hooks/purity
+  65:19  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  63 |         y: Math.random() * 100,
+  64 |         size: Math.random() * 1.8 + 0.8,
+> 65 |         duration: Math.random() * 15 + 15,
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+  66 |         delay: Math.random() * 10,
+  67 |       });
+  68 |     }                                                                                                                               react-hooks/purity
+  66:16  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  64 |         size: Math.random() * 1.8 + 0.8,
+  65 |         duration: Math.random() * 15 + 15,
+> 66 |         delay: Math.random() * 10,
+     |                ^^^^^^^^^^^^^ Cannot call impure function
+  67 |       });
+  68 |     }
+  69 |     return dust;                                                                                                                                                 react-hooks/purity
+  78:12  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  76 |       rings.push({
+  77 |         id: i,
+> 78 |         x: Math.random() * 80 + 10,
+     |            ^^^^^^^^^^^^^ Cannot call impure function
+  79 |         y: Math.random() * 80 + 10,
+  80 |         duration: Math.random() * 8 + 8,
+  81 |         delay: Math.random() * 12,                                                                                                                       react-hooks/purity
+  79:12  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  77 |         id: i,
+  78 |         x: Math.random() * 80 + 10,
+> 79 |         y: Math.random() * 80 + 10,
+     |            ^^^^^^^^^^^^^ Cannot call impure function
+  80 |         duration: Math.random() * 8 + 8,
+  81 |         delay: Math.random() * 12,
+  82 |       });                                                                                                                                react-hooks/purity
+  80:19  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  78 |         x: Math.random() * 80 + 10,
+  79 |         y: Math.random() * 80 + 10,
+> 80 |         duration: Math.random() * 8 + 8,
+     |                   ^^^^^^^^^^^^^ Cannot call impure function
+  81 |         delay: Math.random() * 12,
+  82 |       });
+  83 |     }                                                                                                                                  react-hooks/purity
+  81:16  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  79 |         y: Math.random() * 80 + 10,
+  80 |         duration: Math.random() * 8 + 8,
+> 81 |         delay: Math.random() * 12,
+     |                ^^^^^^^^^^^^^ Cannot call impure function
+  82 |       });
+  83 |     }
+  84 |     return rings;                                                                                                                                                       react-hooks/purity
+
+D:\JeztBrain\src\components\Dashboard\AIAnalysisPanel.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\AnalyticsCharts.jsx
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  6:33  warning  'Zap' is defined but never used    no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\EmergencySupportPanel.jsx
+  1:8   warning  'React' is defined but never used   no-unused-vars
+  3:10  warning  'motion' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\ExpertStats.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\IncidentFeed.jsx
+  1:8   warning  'React' is defined but never used             no-unused-vars
+  8:10  warning  'loading' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\InvestigationPanel.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\NotificationPanel.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+   3:48  warning  'X' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  51:5   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  49 |     if (!user) return;
+  50 |     
+> 51 |     fetchNotifications();
+     |     ^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  52 |
+  53 |     const channel = supabase.channel('public:notifications')
+  54 |       .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'notifications', filter: `expert_id=eq.${user.id}` }, payload => {  react-hooks/set-state-in-effect
+  62:6   warning  React Hook useEffect has a missing dependency: 'fetchNotifications'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\components\Dashboard\ProfileDropdown.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\QuickActions.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\ReportModal.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\StatusToggle.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\TerminalModal.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Dashboard\TerminalPanel.jsx
+   1:8  warning  'React' is defined but never used                                                                                no-unused-vars
+  29:6  warning  React Hook useEffect has a missing dependency: 'logTemplates'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\components\Dashboard\ThreatMap.jsx
+  1:8   warning  'React' is defined but never used        no-unused-vars
+  3:10  warning  'ShieldAlert' is defined but never used  no-unused-vars
+  3:23  warning  'Crosshair' is defined but never used    no-unused-vars
+
+D:\JeztBrain\src\components\Expert\ChatView.jsx
+  1:8   warning  'React' is defined but never used            no-unused-vars
+  3:10  warning  'motion' is defined but never used           no-unused-vars
+  3:18  warning  'AnimatePresence' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\EarningsView.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\EvidenceView.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\IncidentDetailsView.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+   2:10  warning  'Server' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  11:7   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+   9 |   useEffect(() => {
+  10 |     if (!activeIncidentId) {
+> 11 |       setLoading(false);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  12 |       return;
+  13 |     }
+  14 |  react-hooks/set-state-in-effect
+
+D:\JeztBrain\src\components\Expert\OverviewView.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\ProfileView.jsx
+    1:8   warning  'React' is defined but never used               no-unused-vars
+   41:23  warning  'error' is assigned a value but never used      no-unused-vars
+  119:23  warning  'publicUrl' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\TasksView.jsx
+   1:8  warning  'React' is defined but never used                                                                                     no-unused-vars
+  70:6  warning  React Hook useEffect has a missing dependency: 'seedMockIncidents'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\components\Expert\Unified\ActivityFeed.jsx
+   1:8  warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+  46:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  44 |     if (!user) return;
+  45 |     
+> 46 |     fetchNotifications();
+     |     ^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  47 |
+  48 |     const channel = supabase.channel('public:notifications_feed')
+  49 |       .on('postgres_changes', {   react-hooks/set-state-in-effect
+  62:6  warning  React Hook useEffect has a missing dependency: 'fetchNotifications'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\components\Expert\Unified\ActivityLog.jsx
+  1:8   warning  'React' is defined but never used     no-unused-vars
+  2:10  warning  'Activity' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\Unified\ExpertSettings.jsx
+    1:8   warning  'React' is defined but never used         no-unused-vars
+    3:67  warning  'CheckCircle2' is defined but never used  no-unused-vars
+  149:14  warning  'err' is defined but never used           no-unused-vars
+
+D:\JeztBrain\src\components\Expert\Unified\IncidentQueue.jsx
+   1:8  warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+  52:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  50 |
+  51 |   useEffect(() => {
+> 52 |     fetchIncidents();
+     |     ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  53 |   }, [fetchIncidents]);
+  54 |
+  55 |   // We'll rely on manual refresh or Socket.IO for now to keep it simple                                                            react-hooks/set-state-in-effect
+  58:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  56 |   // But for production, we'd add Socket.IO listeners here for 'new_incident_alert'
+  57 |   useEffect(() => {
+> 58 |     fetchIncidents();
+     |     ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  59 |   }, [fetchIncidents]);
+  60 |
+  61 |   const acceptIncident = async (incident) => {  react-hooks/set-state-in-effect
+
+D:\JeztBrain\src\components\Expert\Unified\LiveChatPanel.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\Unified\NotificationPanel.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\Unified\StatsCards.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Expert\Unified\TopBar.jsx
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  3:18  warning  'Menu' is defined but never used   no-unused-vars
+
+D:\JeztBrain\src\components\FuturisticHero.jsx
+    1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          no-unused-vars
+  301:39  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  299 |                       }}
+  300 |                       transition={{
+> 301 |                         duration: 6 + Math.random() * 4,
+      |                                       ^^^^^^^^^^^^^ Cannot call impure function
+  302 |                         repeat: Infinity,
+  303 |                         ease: "linear"
+  304 |                       }}                  react-hooks/purity
+  457:32  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  455 |                     }}
+  456 |                     initial={{
+> 457 |                       x: 100 + Math.random() * 400,
+      |                                ^^^^^^^^^^^^^ Cannot call impure function
+  458 |                       y: 420,
+  459 |                       opacity: 0.1
+  460 |                     }}                                                       react-hooks/purity
+  467:39  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  465 |                     }}
+  466 |                     transition={{
+> 467 |                       duration: 4.5 + Math.random() * 5,
+      |                                       ^^^^^^^^^^^^^ Cannot call impure function
+  468 |                       repeat: Infinity,
+  469 |                       ease: "easeOut",
+  470 |                       delay: Math.random() * 5  react-hooks/purity
+  470:30  warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  468 |                       repeat: Infinity,
+  469 |                       ease: "easeOut",
+> 470 |                       delay: Math.random() * 5
+      |                              ^^^^^^^^^^^^^ Cannot call impure function
+  471 |                     }}
+  472 |                   />
+  473 |                 ))}                                                             react-hooks/purity
+
+D:\JeztBrain\src\components\Layout\DashboardLayout.jsx
+   1:8   warning  'React' is defined but never used          no-unused-vars
+   6:12  warning  'Bell' is defined but never used           no-unused-vars
+   6:18  warning  'User' is defined but never used           no-unused-vars
+  17:11  warning  'user' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Layout\Loader.jsx
+  12:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Layout\UserDropdown.jsx
+  1:8   warning  'React' is defined but never used     no-unused-vars
+  3:16  warning  'Settings' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\Modals\PlatformPreviewModal.jsx
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  3:36  warning  'Cpu' is defined but never used    no-unused-vars
+  3:64  warning  'Lock' is defined but never used   no-unused-vars
+
+D:\JeztBrain\src\components\Notifications\NotificationBell.jsx
+  1:8   warning  'React' is defined but never used           no-unused-vars
+  2:52  warning  'MoreHorizontal' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\chat\ChatInput.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\chat\ChatSidebar.jsx
+  1:8   warning  'React' is defined but never used        no-unused-vars
+  2:41  warning  'Clock' is defined but never used        no-unused-vars
+  2:48  warning  'AlertCircle' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\chat\ChatWindow.jsx
+   1:8   warning  'React' is defined but never used                                                                                  no-unused-vars
+   5:19  warning  'MessageSquare' is defined but never used                                                                          no-unused-vars
+  90:6   warning  React Hook useEffect has a missing dependency: 'getAccessToken'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\components\chat\MessageBubble.jsx
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  2:24  warning  'Check' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\chat\WhatsAppFAB.jsx
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  2:28  warning  'Send' is defined but never used   no-unused-vars
+
+D:\JeztBrain\src\components\profile\CertificationUpload.jsx
+  1:8   warning  'React' is defined but never used   no-unused-vars
+  2:10  warning  'Upload' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\profile\ProfileSettings.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+   2:24  warning  'Globe' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+   2:53  warning  'Info' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         no-unused-vars
+  56:5   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  54 |   useEffect(() => {
+  55 |     if (!user) return;
+> 56 |     fetchProfile();
+     |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  57 |   }, [user]);
+  58 |
+  59 |   const handleSave = async () => {  react-hooks/set-state-in-effect
+  57:6   warning  React Hook useEffect has a missing dependency: 'fetchProfile'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\components\profile\soc\AIAssistantPanel.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\profile\soc\CertificationManager.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-unused-vars
+  41:15  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  39 |
+  40 |   useEffect(() => {
+> 41 |     if (user) fetchCerts();
+     |               ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  42 |   }, [user]);
+  43 |
+  44 |   const handleUpload = async (e) => {  react-hooks/set-state-in-effect
+  42:6   warning  React Hook useEffect has a missing dependency: 'fetchCerts'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/exhaustive-deps
+  53:35  warning  'data' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            no-unused-vars
+
+D:\JeztBrain\src\components\profile\soc\CybersecuritySkills.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+  32:15  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  30 |
+  31 |   useEffect(() => {
+> 32 |     if (user) fetchSkills();
+     |               ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  33 |   }, [user]);
+  34 |
+  35 |   const handleAddSkill = async (e) => {  react-hooks/set-state-in-effect
+  33:6   warning  React Hook useEffect has a missing dependency: 'fetchSkills'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\components\profile\soc\ExpertInformation.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\profile\soc\OperationsTimeline.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  44:7   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  42 |   useEffect(() => {
+  43 |     if (user) {
+> 44 |       fetchLogs();
+     |       ^^^^^^^^^ Avoid calling setState() directly within an effect
+  45 |       const sub = supabase
+  46 |         .channel('timeline_changes')
+  47 |         .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'expert_activity_logs', filter: `user_id=eq.${user.id}` }, payload => {  react-hooks/set-state-in-effect
+  53:6   warning  React Hook useEffect has a missing dependency: 'fetchLogs'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react-hooks/exhaustive-deps
+  89:29  warning  'index' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+
+D:\JeztBrain\src\components\profile\soc\PerformanceMetrics.jsx
+   1:8  warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+  38:7  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  36 |   useEffect(() => {
+  37 |     if (user) {
+> 38 |       fetchMetrics();
+     |       ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  39 |       // Optional: Setup realtime subscription here
+  40 |       const sub = supabase
+  41 |         .channel('metrics_changes')  react-hooks/set-state-in-effect
+  49:6  warning  React Hook useEffect has a missing dependency: 'fetchMetrics'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\components\profile\soc\ProfileHeader.jsx
+  1:8   warning  'React' is defined but never used                no-unused-vars
+  3:8   warning  'CertificationUpload' is defined but never used  no-unused-vars
+  5:50  warning  'onAvatarUpload' is defined but never used       no-unused-vars
+
+D:\JeztBrain\src\components\profile\soc\SecureCommModule.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\components\profile\soc\SecuritySettings.jsx
+   1:8   warning  'React' is defined but never used   no-unused-vars
+   2:20  warning  'Shield' is defined but never used  no-unused-vars
+  20:14  warning  'err' is defined but never used     no-unused-vars
+  32:14  warning  'err' is defined but never used     no-unused-vars
+
+D:\JeztBrain\src\components\reports\AIReportGenerator.jsx
+   1:8   warning  'React' is defined but never used                       no-unused-vars
+   2:18  warning  'AnimatePresence' is defined but never used             no-unused-vars
+   3:40  warning  'ArrowRight' is defined but never used                  no-unused-vars
+   3:52  warning  'Loader2' is defined but never used                     no-unused-vars
+   3:76  warning  'ShieldAlert' is defined but never used                 no-unused-vars
+  55:9   warning  'getSeverityStyles' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\components\reports\ReportPreview.jsx
+  1:8   warning  'React' is defined but never used     no-unused-vars
+  2:10  warning  'motion' is defined but never used    no-unused-vars
+  3:27  warning  'Download' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\context\AuthContext.jsx
+  295:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+D:\JeztBrain\src\context\NotificationContext.jsx
+    1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+   15:7   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  13 |   useEffect(() => {
+  14 |     if (!user) {
+> 15 |       setNotifications([]);
+     |       ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |       setUnreadCount(0);
+  17 |       setLoading(false);
+  18 |       return;  react-hooks/set-state-in-effect
+  117:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  react-refresh/only-export-components
+
+D:\JeztBrain\src\context\ThemeContext.jsx
+   1:8   warning  'React' is defined but never used                                                                                               no-unused-vars
+  31:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+D:\JeztBrain\src\pages\About.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\AdminDashboard.jsx
+  1:8   warning  'React' is defined but never used          no-unused-vars
+  3:45  warning  'MoreVertical' is defined but never used   no-unused-vars
+  6:11  warning  'user' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\Auth.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         no-unused-vars
+   4:10  warning  'Shield' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+  17:43  warning  'user' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 no-unused-vars
+  17:55  warning  'authRole' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             no-unused-vars
+  26:7   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  24 |     const searchParams = new URLSearchParams(location.search);
+  25 |     if (searchParams.get('signup') === 'true') {
+> 26 |       setIsLogin(false);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  27 |     }
+  28 |   }, [location]);
+  29 |  react-hooks/set-state-in-effect
+
+D:\JeztBrain\src\pages\Chat.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\ExpertDashboard.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\ExpertProfile.jsx
+   1:8   warning  'React' is defined but never used             no-unused-vars
+  91:10  warning  'loading' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\ExpertUnifiedDashboard.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\FilesMedia.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\FindExperts.jsx
+   1:8   warning  'React' is defined but never used                no-unused-vars
+   1:27  warning  'useEffect' is defined but never used            no-unused-vars
+   5:18  warning  'Star' is defined but never used                 no-unused-vars
+   5:29  warning  'Cpu' is defined but never used                  no-unused-vars
+   6:3   warning  'Lock' is defined but never used                 no-unused-vars
+   6:9   warning  'Globe' is defined but never used                no-unused-vars
+   6:16  warning  'ArrowRight' is defined but never used           no-unused-vars
+   6:46  warning  'X' is defined but never used                    no-unused-vars
+  10:10  warning  'supabase' is defined but never used             no-unused-vars
+  83:19  warning  'setExperts' is assigned a value but never used  no-unused-vars
+  85:10  warning  'loading' is assigned a value but never used     no-unused-vars
+  85:19  warning  'setLoading' is assigned a value but never used  no-unused-vars
+  86:11  warning  'user' is assigned a value but never used        no-unused-vars
+  87:9   warning  'navigate' is assigned a value but never used    no-unused-vars
+
+D:\JeztBrain\src\pages\IncidentDetail.jsx
+  3:21   warning  'Clock' is defined but never used   no-unused-vars
+  3:67   warning  'User' is defined but never used    no-unused-vars
+  3:108  warning  'Info' is defined but never used    no-unused-vars
+  5:10   warning  'motion' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\IncidentTracking.jsx
+  1:8   warning  'React' is defined but never used            no-unused-vars
+  4:23  warning  'ChevronRight' is defined but never used     no-unused-vars
+  4:45  warning  'Filter' is defined but never used           no-unused-vars
+  4:73  warning  'ExternalLink' is defined but never used     no-unused-vars
+  6:10  warning  'motion' is defined but never used           no-unused-vars
+  6:18  warning  'AnimatePresence' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\Landing.jsx
+    1:8    warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+    4:34   warning  'ArrowRight' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         no-unused-vars
+    4:121  warning  'Mail' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+    4:135  warning  'Cpu' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+    4:140  warning  'Terminal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           no-unused-vars
+    4:164  warning  'Users' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+    5:18   warning  'AnimatePresence' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-unused-vars
+   65:10   warning  'TerminalCtaBox' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+   66:9    warning  The 'lines' array makes the dependencies of useEffect Hook (at line 98) change on every render. To fix this, wrap the initialization of 'lines' in its own useMemo() Hook                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/exhaustive-deps
+  131:11   warning  'user' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  132:9    warning  'navigate' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  631:26   warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  629 |               className="absolute w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)] animate-pulse"
+  630 |               style={{
+> 631 |                 left: `${Math.random() * 100}%`,
+      |                          ^^^^^^^^^^^^^ Cannot call impure function
+  632 |                 top: `${Math.random() * 100}%`,
+  633 |                 animationDuration: `${2 + Math.random() * 4}s`
+  634 |               }}  react-hooks/purity
+  632:25   warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  630 |               style={{
+  631 |                 left: `${Math.random() * 100}%`,
+> 632 |                 top: `${Math.random() * 100}%`,
+      |                         ^^^^^^^^^^^^^ Cannot call impure function
+  633 |                 animationDuration: `${2 + Math.random() * 4}s`
+  634 |               }}
+  635 |             />                                                                                                             react-hooks/purity
+  633:43   warning  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  631 |                 left: `${Math.random() * 100}%`,
+  632 |                 top: `${Math.random() * 100}%`,
+> 633 |                 animationDuration: `${2 + Math.random() * 4}s`
+      |                                           ^^^^^^^^^^^^^ Cannot call impure function
+  634 |               }}
+  635 |             />
+  636 |           ))}                                                                                                    react-hooks/purity
+  859:53   warning  The ref value 'domRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'domRef.current' to a variable inside the effect, and use that variable in the cleanup function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\pages\Payment.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\ProfileSettings.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+   4:21  warning  'Save' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+   6:37  warning  'CheckCircle2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+   6:51  warning  'XCircle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  45:5   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  43 |     const savedProfile = JSON.parse(localStorage.getItem(`jezt-profile-${user?.uid}`)) || {};
+  44 |     
+> 45 |     setName(savedProfile.name || user?.displayName || '');
+     |     ^^^^^^^ Avoid calling setState() directly within an effect
+  46 |     setEmail(savedProfile.email || user?.email || '');
+  47 |     setPhone(savedProfile.phone || '');
+  48 |     setAvatarPreview(savedProfile.photoURL || user?.photoURL || null);  react-hooks/set-state-in-effect
+  71:5   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  69 |     });
+  70 |     
+> 71 |     setHasChanges(isNameChanged || isPhoneChanged || isAvatarChanged || isPrefsChanged);
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  72 |   }, [name, phone, avatarFile, prefs, user]);
+  73 |
+  74 |   const handleSaveProfile = async (e) => {                                                                                                                                 react-hooks/set-state-in-effect
+
+D:\JeztBrain\src\pages\ReportIncident.jsx
+   1:8   warning  'React' is defined but never used              no-unused-vars
+   3:94  warning  'X' is defined but never used                  no-unused-vars
+  21:17  warning  'setError' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\SecureAccess.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+   4:18  warning  'Lock' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-unused-vars
+   4:43  warning  'AlertCircle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             no-unused-vars
+   4:70  warning  'Cpu' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  58:5   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  56 |
+  57 |   useEffect(() => {
+> 58 |     addLog('System Initialization...', 'info');
+     |     ^^^^^^ Avoid calling setState() directly within an effect
+  59 |     addLog('Establishing secure tunnel to SOC v4.0...', 'info');
+  60 |     
+  61 |     if (user?.email) {  react-hooks/set-state-in-effect
+
+D:\JeztBrain\src\pages\SocDashboard.jsx
+  1:8   warning  'React' is defined but never used        no-unused-vars
+  7:34  warning  'Database' is defined but never used     no-unused-vars
+  9:54  warning  'Play' is defined but never used         no-unused-vars
+  9:60  warning  'Volume2' is defined but never used      no-unused-vars
+  9:69  warning  'ShieldAlert' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\StartupSecurity.jsx
+     1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+     5:44  warning  'Play' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+     5:50  warning  'Pause' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+     6:29  warning  'AlertTriangle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+     6:57  warning  'HardDrive' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+     7:3   warning  'RefreshCw' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   no-unused-vars
+     7:20  warning  'Info' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+     7:26  warning  'Users' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+     7:33  warning  'Clock' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+     7:40  warning  'Flame' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+     7:62  warning  'Lock' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+    21:7   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  19 |     const end = parseInt(targetValue, 10);
+  20 |     if (isNaN(end) || start === end) {
+> 21 |       setCount(isNaN(end) ? 0 : end);
+     |       ^^^^^^^^ Avoid calling setState() directly within an effect
+  22 |       return;
+  23 |     }
+  24 |       react-hooks/set-state-in-effect
+   467:10  warning  'activeTab' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          no-unused-vars
+   467:21  warning  'setActiveTab' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+   487:57  warning  The ref value 'statsRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'statsRef.current' to a variable inside the effect, and use that variable in the cleanup function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+   639:32  error    React Hook "useAnimatedCounter" cannot be called inside a callback. React Hooks must be called in a React function component or a custom React Hook function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react-hooks/rules-of-hooks
+   687:10  warning  'logs' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+  1446:6   warning  React Hook useEffect has a missing dependency: 'reviews.length'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\pages\SystemStatus.jsx
+  1:8   warning  'React' is defined but never used        no-unused-vars
+  2:50  warning  'AlertCircle' is defined but never used  no-unused-vars
+  2:63  warning  'RefreshCw' is defined but never used    no-unused-vars
+
+D:\JeztBrain\src\pages\UserDashboard.jsx
+   4:23  warning  'FileWarning' is defined but never used           no-unused-vars
+   4:61  warning  'ChevronRight' is defined but never used          no-unused-vars
+   4:97  warning  'Zap' is defined but never used                   no-unused-vars
+   5:10  warning  'motion' is defined but never used                no-unused-vars
+  29:15  warning  'activeCount' is assigned a value but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\expert\Cases.jsx
+  1:8   warning  'React' is defined but never used           no-unused-vars
+  2:34  warning  'Plus' is defined but never used            no-unused-vars
+  2:70  warning  'MoreHorizontal' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\expert\Dashboard.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\expert\ExpertLayout.jsx
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  5:23  warning  'Cpu' is defined but never used    no-unused-vars
+  7:20  warning  'Zap' is defined but never used    no-unused-vars
+
+D:\JeztBrain\src\pages\expert\LiveChat.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+   4:47  warning  'ChevronRight' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       no-unused-vars
+   4:81  warning  'Paperclip' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          no-unused-vars
+   4:92  warning  'Smile' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              no-unused-vars
+   4:99  warning  'Send' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               no-unused-vars
+  36:5   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  34 |   useEffect(() => {
+  35 |     if (!user) return;
+> 36 |     fetchIncidents();
+     |     ^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  37 |   }, [user]);
+  38 |
+  39 |   const filteredIncidents = incidents.filter(inc =>   react-hooks/set-state-in-effect
+
+D:\JeztBrain\src\pages\expert\Monitoring.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\expert\Notifications.jsx
+  1:8   warning  'React' is defined but never used  no-unused-vars
+  2:10  warning  'Bell' is defined but never used   no-unused-vars
+
+D:\JeztBrain\src\pages\expert\Profile.jsx
+   1:8   warning  'React' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  44:15  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  42 |
+  43 |   useEffect(() => {
+> 44 |     if (user) fetchProfile();
+     |               ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  45 |   }, [user]);
+  46 |
+  47 |   const handleSave = async () => {  react-hooks/set-state-in-effect
+  45:6   warning  React Hook useEffect has a missing dependency: 'fetchProfile'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react-hooks/exhaustive-deps
+
+D:\JeztBrain\src\pages\expert\ReportCenter.jsx
+  1:8  warning  'React' is defined but never used  no-unused-vars
+
+D:\JeztBrain\src\pages\expert\Scanner.jsx
+  1:8   warning  'React' is defined but never used          no-unused-vars
+  2:10  warning  'Terminal' is defined but never used       no-unused-vars
+  2:20  warning  'Search' is defined but never used         no-unused-vars
+  2:28  warning  'Shield' is defined but never used         no-unused-vars
+  2:36  warning  'AlertTriangle' is defined but never used  no-unused-vars
+  2:73  warning  'Lock' is defined but never used           no-unused-vars
+  3:10  warning  'motion' is defined but never used         no-unused-vars
+
+D:\JeztBrain\src\pages\expert\Settings.jsx
+  1:8   warning  'React' is defined but never used         no-unused-vars
+  2:22  warning  'SettingsIcon' is defined but never used  no-unused-vars
+  2:48  warning  'User' is defined but never used          no-unused-vars
+
+D:\JeztBrain\src\pages\expert\ThreatIntel.jsx
+  1:8   warning  'React' is defined but never used      no-unused-vars
+  2:10  warning  'Activity' is defined but never used   no-unused-vars
+  2:54  warning  'BarChart2' is defined but never used  no-unused-vars
+  4:10  warning  'motion' is defined but never used     no-unused-vars
+
+✖ 340 problems (1 error, 339 warnings)
+

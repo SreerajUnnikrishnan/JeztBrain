@@ -1,0 +1,108 @@
+Created At: 2026-06-30T15:47:34Z
+Completed At: 2026-06-30T15:47:34Z
+File Path: `file:///d:/JeztBrain/src/components/Landing/PlatformOverview.jsx`
+Total Lines: 207
+Total Bytes: 12468
+Showing lines 1 to 100
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: import React from 'react';
+2: import { motion } from 'framer-motion';
+3: import { Shield, Brain, Radar, Search, Zap, ShieldCheck } from 'lucide-react';
+4: 
+5: export default function PlatformOverview() {
+6:   return (
+7:     <section className="relative pt-24 pb-36 md:pt-32 md:pb-48 lg:pt-40 lg:pb-56 overflow-hidden z-10 bg-slate-50 text-slate-900 selection:bg-purple-500/20 selection:text-[#7B2FF7]">
+8: 
+9:       {/* ── Background Layer with Showroom Image ── */}
+10:       <div className="absolute inset-0 z-0 select-none pointer-events-none">
+11:         <img
+12:           src="/images/showroom_daylight_logo.png"
+13:           alt="JeztBrain Corporate Showroom Lobby Scenery"
+14:           className="w-full h-full object-cover object-center filter brightness-100 contrast-[1.01]"
+15:         />
+16: 
+17:         {/* Top Blend Gradient to fade solid black Hero bottom into the bright showroom */}
+18:         <div className="absolute top-0 left-0 right-0 h-44 bg-gradient-to-b from-black via-black/35 to-transparent pointer-events-none" />
+19: 
+20:         {/* Bottom Blend Gradient to fade bright showroom back to black for the next section */}
+21:         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
+22:       </div>
+23: 
+24:       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10 w-full">
+25:         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+26: 
+27:           {/* Left Column: Architecture Overview */}
+28:           <motion.div
+29:             initial={{ opacity: 0, x: -30 }}
+30:             whileInView={{ opacity: 1, x: 0 }}
+31:             viewport={{ once: true }}
+32:             transition={{ duration: 0.7 }}
+33:             className="lg:col-span-5 space-y-8 text-left"
+34:           >
+35:             <div className="space-y-4">
+36:               {/* Tagline */}
+37:               <div className="flex items-center gap-2">
+38:                 <span className="text-xs font-mono font-black text-[#7B2FF7] tracking-[0.25em] uppercase">
+39:                   ⚡ ARCHITECTURE SCHEMATIC
+40:                 </span>
+41:               </div>
+42: 
+43:               {/* Title */}
+44:               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 font-space-grotesk tracking-tight leading-tight">
+45:                 The <span className="text-[#7B2FF7]">JeztBrain</span> Ecosystem<span className="text-red-500">.</span>
+46:               </h2>
+47: 
+48:               {/* Description */}
+49:               <p className="text-slate-600 text-sm md:text-base leading-relaxed font-light">
+50:                 JeztBrain is not a collection of fragmented security tools. It is a single, cohesive ecosystem structured around our main customer-facing platform: <span className="font-bold text-[#7B2FF7]">"JeztBrain"</span>.
+51:               </p>
+52:             </div>
+53: 
+54:             {/* Core Node Cards (Solid backgrounds, no glassmorphism, consistent padding) */}
+55:             <div className="space-y-4 max-w-[480px]">
+56: 
+57:               {/* Card 1: JeztBrain Operations Platform */}
+58:               <div className="border border-[#7B2FF7]/15 bg-[#F3F0FF] p-5 rounded-2xl flex items-center gap-4 relative shadow-[0_4px_20px_rgba(123,47,247,0.03)] transition-transform duration-300 hover:scale-[1.01]">
+59:                 <div className="w-12 h-12 rounded-xl bg-white border border-[#7B2FF7]/20 flex items-center justify-center text-[#7B2FF7] shrink-0">
+60:                   <Shield size={20} className="drop-shadow-[0_0_4px_rgba(123,47,247,0.2)]" />
+61:                 </div>
+62:                 <div className="text-left">
+63:                   <h4 className="text-base font-black text-slate-900 font-space-grotesk leading-none">JeztBrain</h4>
+64:                   <p className="text-[10px] text-[#7B2FF7] mt-1.5 font-mono uppercase font-black tracking-widest">CUSTOMER OPERATIONS PLATFORM</p>
+65:                 </div>
+66:               </div>
+67: 
+68:               {/* Card 2: JeztBrainSpider Intelligence & Eagle Vision */}
+69:               <div className="border border-red-500/15 bg-[#FFF5F5] p-5 rounded-2xl flex items-center gap-4 relative shadow-[0_4px_20px_rgba(239,68,68,0.03)] transition-transform duration-300 hover:scale-[1.01]">
+70:                 <div className="w-12 h-12 rounded-xl bg-white border border-red-500/20 flex items-center justify-center text-red-500 shrink-0">
+71:                   <Brain size={20} className="drop-shadow-[0_0_4px_rgba(239,68,68,0.2)]" />
+72:                 </div>
+73:                 <div className="text-left">
+74:                   <h4 className="text-base font-black text-slate-900 font-space-grotesk leading-none">JeztBrainSpider</h4>
+75:                   <p className="text-[10px] text-red-500 mt-1.5 font-mono uppercase font-black tracking-widest">CORE INTELLIGENCE & EAGLE VISION</p>
+76:                 </div>
+77:               </div>
+78: 
+79:             </div>
+80: 
+81:             {/* Description Attribution Block with sharp purple left border */}
+82:             <div className="text-left text-xs md:text-sm text-slate-600 font-sans leading-relaxed border-l-[3px] border-[#7B2FF7] pl-4 max-w-[480px] font-light">
+83:               JeztBrainSpider powers every intelligence and response action inside the main platform, combining threat hunting with Strategic Eagle Vision for full attribution.
+84:             </div>
+85: 
+86:           </motion.div>
+87: 
+88:           {/* Right Column: Platform Overview & Pipeline */}
+89:           <motion.div
+90:             initial={{ opacity: 0, x: 30 }}
+91:             whileInView={{ opacity: 1, x: 0 }}
+92:             viewport={{ once: true }}
+93:             transition={{ duration: 0.7 }}
+94:             className="lg:col-span-7 space-y-8 text-left lg:pl-12 lg:max-w-[580px] z-20"
+95:           >
+96:             <div className="space-y-4">
+97:               {/* Tagline */}
+98:               <div className="flex items-center gap-2">
+99:                 <span className="text-xs font-mono font-black text-[#7B2FF7] tracking-[0.25em] uppercase">
+100:                   ⚡ PLATFORM OVERVIEW
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

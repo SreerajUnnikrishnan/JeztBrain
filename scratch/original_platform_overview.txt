@@ -1,0 +1,116 @@
+Created At: 2026-06-30T16:15:40Z
+Completed At: 2026-06-30T16:15:40Z
+File Path: `file:///d:/JeztBrain/src/components/Landing/PlatformOverview.jsx`
+Total Lines: 207
+Total Bytes: 12468
+Showing lines 100 to 207
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+100:                   ⚡ PLATFORM OVERVIEW
+101:                 </span>
+102:               </div>
+103: 
+104:               {/* Title */}
+105:               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 font-space-grotesk tracking-tight leading-tight">
+106:                 One Unified<br />
+107:                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#7B2FF7] via-[#8B5CF6] to-[#EF4444] font-black">
+108:                   Cyber Ecosystem
+109:                 </span><span className="text-red-500">.</span>
+110:               </h2>
+111: 
+112:               {/* Description */}
+113:               <p className="text-slate-600 text-sm md:text-base leading-relaxed font-light">
+114:                 Everything intelligence-driven happens inside its core engine, <span className="font-bold text-slate-800">"JeztBrainSpider"</span>. JeztBrain is powered by JeztBrainSpider.
+115:               </p>
+116:             </div>
+117: 
+118:             {/* ── Responsive Workflow Pipeline Diagram ── */}
+119:             <div className="relative py-4 max-w-[620px]">
+120: 
+121:               {/* Desktop Horizontal dotted connector line (hidden on mobile) */}
+122:               <div className="absolute top-[32px] left-8 right-8 h-[1px] border-t border-dashed border-[#7B2FF7]/30 z-0 hidden md:block" />
+123: 
+124:               {/* Mobile Vertical dotted connector line (hidden on desktop) */}
+125:               <div className="absolute left-[28px] top-6 bottom-6 w-[1px] border-l border-dashed border-[#7B2FF7]/30 z-0 md:hidden" />
+126: 
+127:               <div className="flex flex-col md:grid md:grid-cols-4 gap-6 md:gap-2 relative z-10">
+128: 
+129:                 {/* Step 1: DETECT */}
+130:                 <div className="flex flex-row md:flex-col items-center md:text-center gap-4 md:gap-3">
+131:                   <div className="w-14 h-14 rounded-full bg-white border border-[#7B2FF7]/35 flex items-center justify-center text-[#7B2FF7] shadow-[0_4px_12px_rgba(123,47,247,0.06)] shrink-0 transition-transform duration-300 hover:scale-[1.05]">
+132:                     <Radar size={20} />
+133:                   </div>
+134:                   <div className="text-left md:text-center">
+135:                     <h5 className="text-[10px] md:text-xs font-black text-slate-900 uppercase tracking-wider font-space-grotesk">DETECT</h5>
+136:                     <p className="text-[9px] md:text-[10px] text-slate-500 mt-0.5 leading-tight">AI-Powered Detection</p>
+137:                   </div>
+138:                 </div>
+139: 
+140:                 {/* Step 2: ANALYZE */}
+141:                 <div className="flex flex-row md:flex-col items-center md:text-center gap-4 md:gap-3">
+142:                   <div className="w-14 h-14 rounded-full bg-white border border-[#7B2FF7]/35 flex items-center justify-center text-[#7B2FF7] shadow-[0_4px_12px_rgba(123,47,247,0.06)] shrink-0 transition-transform duration-300 hover:scale-[1.05]">
+143:                     <Search size={20} />
+144:                   </div>
+145:                   <div className="text-left md:text-center">
+146:                     <h5 className="text-[10px] md:text-xs font-black text-slate-900 uppercase tracking-wider font-space-grotesk">ANALYZE</h5>
+147:                     <p className="text-[9px] md:text-[10px] text-slate-500 mt-0.5 leading-tight">Behavior & Threat Analysis</p>
+148:                   </div>
+149:                 </div>
+150: 
+151:                 {/* Step 3: RESPOND */}
+152:                 <div className="flex flex-row md:flex-col items-center md:text-center gap-4 md:gap-3">
+153:                   <div className="w-14 h-14 rounded-full bg-white border border-[#7B2FF7]/35 flex items-center justify-center text-[#7B2FF7] shadow-[0_4px_12px_rgba(123,47,247,0.06)] shrink-0 transition-transform duration-300 hover:scale-[1.05]">
+154:                     <Zap size={20} />
+155:                   </div>
+156:                   <div className="text-left md:text-center">
+157:                     <h5 className="text-[10px] md:text-xs font-black text-slate-900 uppercase tracking-wider font-space-grotesk">RESPOND</h5>
+158:                     <p className="text-[9px] md:text-[10px] text-slate-500 mt-0.5 leading-tight">Automated Response</p>
+159:                   </div>
+160:                 </div>
+161: 
+162:                 {/* Step 4: PREDICT */}
+163:                 <div className="flex flex-row md:flex-col items-center md:text-center gap-4 md:gap-3">
+164:                   <div className="w-14 h-14 rounded-full bg-white border border-[#7B2FF7]/35 flex items-center justify-center text-[#7B2FF7] shadow-[0_4px_12px_rgba(123,47,247,0.06)] shrink-0 transition-transform duration-300 hover:scale-[1.05]">
+165:                     <ShieldCheck size={20} />
+166:                   </div>
+167:                   <div className="text-left md:text-center">
+168:                     <h5 className="text-[10px] md:text-xs font-black text-slate-900 uppercase tracking-wider font-space-grotesk">PREDICT</h5>
+169:                     <p className="text-[9px] md:text-[10px] text-slate-500 mt-0.5 leading-tight">Threat Forecasting</p>
+170:                   </div>
+171:                 </div>
+172:               </div>
+173:             </div>
+174: 
+175:             {/* Bottom Card: Eagle Strategic Vision Panel */}
+176:             <div className="border border-[#7B2FF7]/15 bg-[#F3F0FF] p-6 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-6 relative shadow-[0_6px_25px_rgba(123,47,247,0.04)] max-w-[620px]">
+177:               {/* Left: Eagle Icon and Title */}
+178:               <div className="flex items-center gap-3 shrink-0">
+179:                 <div className="w-12 h-12 rounded-xl bg-white border border-[#7B2FF7]/20 flex items-center justify-center text-[#7B2FF7]">
+180:                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="drop-shadow-[0_0_3px_rgba(123,47,247,0.2)]">
+181:                     <path d="M12 2L2 7l10 5 10-5-10-5z" />
+182:                     <path d="M2 17l10 5 10-5" />
+183:                     <path d="M2 12l10 5 10-5" />
+184:                   </svg>
+185:                 </div>
+186:                 <h4 className="text-xs font-black text-[#7B2FF7] tracking-tight uppercase max-w-[120px] text-left leading-tight">
+187:                   Eagle Strategic<br />Vision Merged
+188:                 </h4>
+189:               </div>
+190: 
+191:               {/* Divider (hidden on small stacked views) */}
+192:               <div className="hidden sm:block h-12 w-[1px] bg-[#7B2FF7]/25" />
+193: 
+194:               {/* Right: Description */}
+195:               <p className="text-xs text-slate-600 leading-relaxed font-light text-left">
+196:                 We have fused advanced Eagle strategic analysis into JeztBrainSpider. Threat actor attribution, TTP mapping, and threat forecasts are directly fed into the main response workflow.
+197:               </p>
+198:             </div>
+199: 
+200:           </motion.div>
+201: 
+202:         </div>
+203:       </div>
+204:     </section>
+205:   );
+206: }
+207: 
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
