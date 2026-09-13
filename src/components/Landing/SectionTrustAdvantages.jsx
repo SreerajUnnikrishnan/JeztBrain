@@ -18,7 +18,7 @@ export default function SectionTrustAdvantages() {
     {
       step: "03",
       title: "Privacy-First Architecture",
-      desc: "Zero-knowledge telemetry storage adhering strictly to SOC2 Type II, ISO 27001, HIPAA, & GDPR.",
+      desc: "Privacy-first infrastructure utilizing secure encryption and strict data protection practices for user telemetry.",
       icon: Lock
     },
     {

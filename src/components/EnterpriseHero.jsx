@@ -36,8 +36,7 @@ export default function EnterpriseHero() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-6xl sm:text-7xl md:text-8xl lg:text-[104px] font-black font-space-grotesk tracking-tight leading-[1.02] text-white uppercase"
             >
-              Detect. Analyze<br />
-              <br />
+              Detect. Analyze.<br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6C4DFF] via-blue-500 to-[#2FA8FF] drop-shadow-[0_0_35px_rgba(108,77,255,0.3)]">
                 Respond Instantly.
               </span>
@@ -49,7 +48,7 @@ export default function EnterpriseHero() {
               transition={{ duration: 0.8, delay: 0.25 }}
               className="text-slate-200 text-sm sm:text-base md:text-lg leading-relaxed max-w-[800px] font-light mx-auto"
             >
-              JeztBrain is a AI-powered cybersecurity platform that directly connects organizations and individuals with vetted cybersecurity experts for real-world cyber incident response, threat intelligence, and proactive security services.
+              AI-powered cybersecurity that connects individuals and organizations directly with verified cybersecurity experts for rapid incident response, intelligent threat analysis, and proactive digital protection.
             </motion.p>
           </div>
 
@@ -64,7 +63,7 @@ export default function EnterpriseHero() {
               to="/chat"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#6C4DFF] to-blue-600 hover:opacity-95 text-white font-bold font-mono text-xs uppercase tracking-widest rounded-lg transition-all duration-300 hover:scale-[1.03] shadow-[0_0_30px_rgba(108,77,255,0.35)]"
             >
-              Talk to Expert
+              TALK TO AN EXPERT
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
 
@@ -72,7 +71,7 @@ export default function EnterpriseHero() {
               href="#spider-pro"
               className="group inline-flex items-center gap-3 px-8 py-4 border border-white/25 bg-white/5 backdrop-blur-md text-slate-200 hover:text-white font-bold font-mono text-xs uppercase tracking-widest rounded-lg transition-all duration-300 hover:bg-white/10 hover:border-white/40"
             >
-              Explore Platform
+              EXPLORE PLATFORM
             </a>
           </motion.div>
 

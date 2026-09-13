@@ -32,7 +32,7 @@ export default function SpiderPro() {
     { name: "Incident Dashboard", icon: BarChart3, desc: "Single control center to review and resolve containment tickets.", theme: "purple" },
     { name: "Security Analytics", icon: BarChart3, desc: "Trend tracking and heuristic reports for operations planning.", theme: "purple" },
     { name: "Executive Reports", icon: FileText, desc: "Automated executive-ready security posture slide sheets.", theme: "blue" },
-    { name: "Compliance Modules", icon: Lock, desc: "Pre-mapped standard checklists for SOC2, ISO27001, and HIPAA.", theme: "green" },
+    { name: "Compliance Modules", icon: Lock, desc: "Pre-mapped standard checklists for security audits and risk frameworks.", theme: "green" },
     { name: "AI Security Assistant", icon: MessageSquare, desc: "Conversational agent resolving logs and compiling playbooks.", theme: "purple" }
   ];
 

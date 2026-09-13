@@ -34,6 +34,7 @@ import StartupSecurity from './pages/StartupSecurity';
 import JeztBrainSpider from './pages/platform/JeztBrainSpider';
 import Navbar from './components/Layout/Navbar';
 import AIResponderWidget from './components/AI/AIResponderWidget';
+import MaintenancePopup from './components/MaintenancePopup';
 import DashboardLayout from './components/Layout/DashboardLayout';
 import { Toaster } from 'react-hot-toast';
 
@@ -156,6 +157,7 @@ function AppRoutes() {
       )}
 
       <AIResponderWidget />
+      <MaintenancePopup />
     </div>
   );
 }

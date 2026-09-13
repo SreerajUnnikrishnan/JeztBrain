@@ -28,7 +28,7 @@ export default function SectionFAQ() {
     },
     {
       q: "Is my information secure?",
-      a: "Absolutely. JeztBrain utilizes 256-bit zero-knowledge encrypted telemetry storage. Our infrastructure is certified under SOC 2 Type II, ISO/IEC 27001:2022, HIPAA, and GDPR standards."
+      a: "Absolutely. JeztBrain utilizes industry-standard end-to-end encryption for all communication and data storage, ensuring your incident telemetry and private information remain completely protected."
     }
   ];
 

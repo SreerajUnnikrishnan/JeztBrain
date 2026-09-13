@@ -27,20 +27,6 @@ export default function SectionHero() {
         {/* Centered Hero Content */}
         <div className="max-w-4xl mx-auto space-y-8 flex flex-col items-center text-center py-8">
           
-          {/* Pill Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-100/90 border border-slate-200 shadow-sm text-xs font-semibold font-mono text-slate-700"
-          >
-            <span className="flex h-2.5 w-2.5 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
-            </span>
-            <span className="text-slate-900 font-bold uppercase tracking-wider">AI-POWERED THREAT INTELLIGENCE PLATFORM</span>
-          </motion.div>
-
           {/* Main Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 25 }}
@@ -48,9 +34,9 @@ export default function SectionHero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-black tracking-tight leading-[1.08] text-slate-900 text-center"
           >
-            Intelligent Cybersecurity.<br />
+            Detect. Analyze.<br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
-              Faster Incident Response.
+              Respond Instantly.
             </span>
           </motion.h1>
 
@@ -61,7 +47,7 @@ export default function SectionHero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-[720px] text-center font-normal"
           >
-            JeztBrain brings AI-powered threat intelligence, incident investigation, and verified cybersecurity expertise together in one connected platform. Detect threats, understand risks, and respond with confidence.
+            AI-powered cybersecurity that connects individuals and organizations directly with verified cybersecurity experts for rapid incident response, intelligent threat analysis, and proactive digital protection.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -72,19 +58,19 @@ export default function SectionHero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
           >
             <Link
-              to="/platform/jeztbrainspider"
+              to="/chat"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:opacity-95 text-white font-bold font-mono text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.02]"
             >
               <Zap className="w-4 h-4 text-white" />
-              Explore JeztBrain
+              TALK TO AN EXPERT
               <ArrowRight size={16} />
             </Link>
 
             <Link
-              to="/chat"
+              to="/platform/jeztbrainspider"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-slate-50 border border-slate-200 hover:border-slate-300 text-slate-800 font-bold font-mono text-xs uppercase tracking-wider rounded-xl shadow-sm transition-all"
             >
-              Talk to a Cybersecurity Expert
+              EXPLORE PLATFORM
             </Link>
           </motion.div>
 

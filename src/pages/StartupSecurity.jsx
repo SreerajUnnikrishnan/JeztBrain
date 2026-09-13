@@ -7,6 +7,7 @@ import {
   RefreshCw, Star, Info, Users, Clock, Flame, Database, Zap, Lock, Radio
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import EnterpriseFooter from '../components/Landing/EnterpriseFooter';
 
 // Custom Hook for counting animations
 function useAnimatedCounter(targetValue, duration = 2000, trigger = false) {
@@ -1745,67 +1746,5 @@ function FooterSection() {
     }
   ];
 
-  return (
-    <footer className="relative py-16 bg-[#070B14] border-t border-white/5 z-10 text-left">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-
-        {/* Brand Column */}
-        <div className="space-y-6">
-          <Link to="/" className="flex items-center gap-3 group relative self-start inline-flex">
-            <div className="absolute -inset-2 bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <div className="relative bg-gradient-to-br from-fuchsia-500/10 via-[#0A0F1F] to-purple-600/10 p-2 rounded-xl border border-[#A855F7]/30 shadow-[0_0_15px_rgba(123, 47, 247,0.2)] flex items-center justify-center">
-              <Shield className="text-[#A855F7] h-5 w-5 drop-shadow-[0_0_10px_rgba(123, 47, 247,0.8)] relative z-10" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-black text-xl tracking-tight flex items-center">
-                <span className="text-white">Jezt</span>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#A855F7] to-purple-500 font-extrabold ml-0.5">Brain</span>
-              </span>
-            </div>
-          </Link>
-
-          <p className="text-xs text-[#A1A1AA] leading-relaxed max-w-[240px]">
-            Proactive corporate-grade AI protection protecting infrastructure and data pipelines for venture-backed digital organizations.
-          </p>
-
-          {/* Active status pulse */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[#0D1320] border border-white/5 font-mono text-[9px] text-[#00FFB2] font-black uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00FFB2] animate-pulse" />
-            All Defensive Systems Operational
-          </div>
-        </div>
-
-        {/* Links Columns */}
-        {links.map((col, idx) => (
-          <div key={idx} className="space-y-4">
-            <h4 className="font-mono text-[10px] font-black text-white tracking-[0.2em] uppercase">
-              {col.title}
-            </h4>
-            <ul className="space-y-3">
-              {col.items.map((item, iidx) => (
-                <li key={iidx}>
-                  <a
-                    href={item.href}
-                    className="text-xs text-[#A1A1AA] hover:text-[#A855F7] transition-colors font-medium"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-
-      </div>
-
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-[10px] text-slate-500">
-        <p>&copy; 2026 JEZTBRAIN CYBERSECURITY. ALL RIGHTS RESERVED PROTECTING HOSTS.</p>
-        <div className="flex gap-6">
-          <a href="#" className="hover:text-white transition-colors">SECURITY POLICY</a>
-          <a href="#" className="hover:text-white transition-colors">COMPLIANCE CERTIFICATION</a>
-          <a href="#" className="hover:text-white transition-colors">SERVICE SLA</a>
-        </div>
-      </div>
-    </footer>
-  );
+  return <EnterpriseFooter />;
 }
