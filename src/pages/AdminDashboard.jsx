@@ -21,7 +21,7 @@ export default function AdminDashboard() {
           </h1>
           <p className="text-gray-500 mt-1">Manage users, experts, and system configurations.</p>
         </div>
-        <button className="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-lg font-medium shadow-sm transition-colors">
+        <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium shadow-sm transition-colors cursor-pointer">
           Add User
         </button>
       </div>

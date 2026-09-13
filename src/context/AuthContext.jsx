@@ -294,6 +294,21 @@ export const AuthProvider = ({ children }) => {
 
 export const useAuth = () => {
   const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error('useAuth must be used inside <AuthProvider>');
+  if (!ctx) {
+    return {
+      user: null,
+      role: 'user',
+      loading: false,
+      login: async () => {},
+      signup: async () => {},
+      logout: async () => {},
+      updateRole: async () => {},
+      getAccessToken: () => null,
+      BACKEND_URL: 'http://localhost:5000',
+      isVerified: true,
+      verifyUnikey: async () => true,
+      generateAndSendUnikey: async () => ({ success: false })
+    };
+  }
   return ctx;
 };

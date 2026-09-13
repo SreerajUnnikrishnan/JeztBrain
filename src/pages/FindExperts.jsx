@@ -307,14 +307,23 @@ export default function FindExperts() {
                         </div>
 
                         <div className="pt-4 space-y-4">
-                          <button className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl bg-fuchsia-500 text-black font-bold text-sm hover:bg-fuchsia-400 transition-all shadow-[0_0_20px_rgba(123, 47, 247,0.2)] hover:shadow-[0_0_30px_rgba(123, 47, 247,0.4)] active:scale-95">
+                          <button
+                            onClick={() => navigate('/chat')}
+                            className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl bg-fuchsia-500 text-black font-bold text-sm hover:bg-fuchsia-400 transition-all shadow-[0_0_20px_rgba(123,47,247,0.2)] hover:shadow-[0_0_30px_rgba(123,47,247,0.4)] active:scale-95 cursor-pointer"
+                          >
                             <MessageSquare size={18} /> Start Operational Chat
                           </button>
                           <div className="grid grid-cols-2 gap-4">
-                            <button className="py-3 rounded-2xl bg-white/5 border border-white/10 font-bold text-xs hover:bg-white/10 transition-all">
+                            <button
+                              onClick={() => navigate('/report-incident')}
+                              className="py-3 rounded-2xl bg-white/5 border border-white/10 font-bold text-xs hover:bg-white/10 transition-all cursor-pointer"
+                            >
                               Assign Incident
                             </button>
-                            <button className="py-3 rounded-2xl bg-white/5 border border-white/10 font-bold text-xs hover:bg-white/10 transition-all">
+                            <button
+                              onClick={() => navigate('/expert-profile')}
+                              className="py-3 rounded-2xl bg-white/5 border border-white/10 font-bold text-xs hover:bg-white/10 transition-all cursor-pointer"
+                            >
                               View Activity
                             </button>
                           </div>

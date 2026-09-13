@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 // Use the valid anon key to verify user tokens - this works as proven by test_supabase3.js
-const SUPABASE_URL = (process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || '').trim();
+const SUPABASE_URL = (process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://tkqidkmrlsrglhlfcwvz.supabase.co').trim();
 const ANON_KEY = 'sb_publishable_A9CCRqbEFlddPEagCvXimg_Q_sqXOza';
 
 // Anon client used solely for token verification — getUser(token) works with anon key

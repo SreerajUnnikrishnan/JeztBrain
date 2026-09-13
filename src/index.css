@@ -6,14 +6,14 @@
 @theme {
   --font-sora: 'Sora', 'Inter', sans-serif;
   --font-space-grotesk: 'Space Grotesk', 'Inter', sans-serif;
-  
+
   --color-primary: #7B2FF7;
   --color-primary-hover: #6D28D9;
   --color-secondary: #9333EA;
   --color-accent: #A855F7;
   --color-navy: #0B1020;
   --color-midnight: #111827;
-  
+
   --color-dark: #0f172a;
   --color-light: #ffffff;
   --color-gray-50: #f8fafc;
@@ -43,8 +43,8 @@
     color-scheme: dark;
   }
 
-  body, 
-  #root, 
+  body,
+  #root,
   .min-h-screen {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   }
@@ -57,9 +57,17 @@
   }
 }
 
-.font-sora { font-family: 'Sora', sans-serif; }
-.font-space-grotesk { font-family: 'Space Grotesk', sans-serif; }
-.font-mono-jetbrains { font-family: 'JetBrains Mono', monospace; }
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+.font-space-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono-jetbrains {
+  font-family: 'JetBrains Mono', monospace;
+}
 
 /* Clean SaaS Glass Panel - Softened for better blending */
 .glass-panel {
@@ -74,6 +82,7 @@
 .premium-glow-border {
   position: relative;
 }
+
 .premium-glow-border::before {
   content: '';
   position: absolute;
@@ -84,6 +93,7 @@
   opacity: 0.5;
   transition: opacity 0.3s ease;
 }
+
 .premium-glow-border:hover::before {
   opacity: 1;
 }
@@ -91,15 +101,22 @@
 /* Continuous ambient mesh gradient */
 .bg-mesh-gradient {
   background-color: #030712;
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 0%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
     radial-gradient(circle at 85% 100%, rgba(139, 92, 246, 0.06) 0%, transparent 60%),
     radial-gradient(circle at 50% 50%, rgba(123, 47, 247, 0.03) 0%, transparent 80%);
 }
 
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {

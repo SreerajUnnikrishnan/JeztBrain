@@ -66,6 +66,9 @@ const AuthRedirect = () => {
   if (loading) return null;
   if (!user) return <Auth />;
 
+  if (role === 'admin') {
+    return <Navigate to="/admin" replace />;
+  }
   if (SPECIALIST_ROLES.includes(role)) {
     return <Navigate to={getExpertDashboardPath(role)} replace />;
   }
@@ -121,6 +124,7 @@ function AppRoutes() {
             <Route path="/startup-security" element={<StartupSecurity />} />
             <Route path="/platform/jeztbrainspider" element={<JeztBrainSpider />} />
             <Route path="/jeztbrainspider" element={<JeztBrainSpider />} />
+            <Route path="/report-incident" element={<Navigate to="/report" replace />} />
             <Route path="/auth" element={<AuthRedirect />} />
             <Route path="/login" element={<Navigate to="/auth" replace />} />
             <Route path="/signup" element={<Navigate to="/auth?signup=true" replace />} />

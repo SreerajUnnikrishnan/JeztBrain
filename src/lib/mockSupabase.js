@@ -68,6 +68,46 @@ class QueryBuilder {
     return this;
   }
 
+  or(value) {
+    this.filters.push({ field: null, value, type: 'or' });
+    return this;
+  }
+
+  in(field, value) {
+    this.filters.push({ field, value, type: 'in' });
+    return this;
+  }
+
+  ilike(field, value) {
+    this.filters.push({ field, value, type: 'ilike' });
+    return this;
+  }
+
+  like(field, value) {
+    this.filters.push({ field, value, type: 'like' });
+    return this;
+  }
+
+  gte(field, value) {
+    this.filters.push({ field, value, type: 'gte' });
+    return this;
+  }
+
+  lte(field, value) {
+    this.filters.push({ field, value, type: 'lte' });
+    return this;
+  }
+
+  gt(field, value) {
+    this.filters.push({ field, value, type: 'gt' });
+    return this;
+  }
+
+  lt(field, value) {
+    this.filters.push({ field, value, type: 'lt' });
+    return this;
+  }
+
   order(field, { ascending = true } = {}) {
     this.orderBy = { field, ascending };
     return this;

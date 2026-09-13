@@ -1,18 +1,19 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 
-// Import 15 Premium Homepage Sections
-import EnterpriseHero from '../components/EnterpriseHero'; // Section 1
-import WhyJeztBrainGeneral from '../components/Landing/WhyJeztBrainGeneral'; // Section 2
-import MissionAndVision from '../components/Landing/MissionAndVision'; // Section 3
-import EnterpriseServices from '../components/Landing/EnterpriseServices'; // Section 4
-import JeztBrainSpiderSection from '../components/Landing/JeztBrainSpiderSection'; // Section 7
-import SpiderPro from '../components/Landing/SpiderPro'; // Section 8
-import WhyJeztBrain from '../components/Landing/WhyJeztBrain'; // Section 9
-import ResearchLab from '../components/Landing/ResearchLab'; // Section 10
-import FaqSection from '../components/Landing/FaqSection'; // Section 13
-import ContactSection from '../components/Landing/ContactSection'; // Section 14
-import EnterpriseFooter from '../components/Landing/EnterpriseFooter'; // Section 15
+// Import 12 Storytelling Sections
+import SectionHero from '../components/Landing/SectionHero'; // Section 1: Hero (Dark Navy, Blue, Purple)
+import SectionWhyJeztBrain from '../components/Landing/SectionWhyJeztBrain'; // Section 2: Why JeztBrain (Dark Blue, Purple)
+import MissionAndVision from '../components/Landing/MissionAndVision'; // Section 3: Ecosystem (White, Light Grey, Purple)
+import SectionExpertConnect from '../components/Landing/SectionExpertConnect'; // Section 4: Expert Connect (Purple, Blue)
+import JeztBrainSpiderSection from '../components/Landing/JeztBrainSpiderSection'; // Section 5: JeztBrainSpider (Black, Red)
+import SpiderPro from '../components/Landing/SpiderPro'; // Section 6: Spider Pro (White, Blue)
+import EnterpriseServices from '../components/Landing/EnterpriseServices'; // Section 7: Cyber Services (Dark Navy)
+import ResearchLab from '../components/Landing/ResearchLab'; // Section 8: Research Labs (White, Soft Blue)
+import SectionIndustries from '../components/Landing/SectionIndustries'; // Section 9: Industries (Blue)
+import SectionTrustAdvantages from '../components/Landing/SectionTrustAdvantages'; // Section 10: Trust & Advantages (Clean Slate, Emerald)
+import SectionFinalCTA from '../components/Landing/SectionFinalCTA'; // Section 12: CTA (Midnight Navy, Emerald)
+import EnterpriseFooter from '../components/Landing/EnterpriseFooter'; // Footer (Black)
 
 export default function Landing() {
   const { loading } = useAuth();
@@ -20,44 +21,42 @@ export default function Landing() {
   if (loading) return null;
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white font-sans selection:bg-[#6C4DFF]/30 selection:text-white overflow-x-hidden relative">
-
-      {/* Subtle global cyber grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.0015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.0015)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none z-0 opacity-20" />
+    <div className="flex flex-col min-h-screen bg-white text-slate-900 font-sans selection:bg-purple-100 overflow-x-hidden relative">
 
       {/* SECTION 1: HERO */}
-      <EnterpriseHero />
+      <SectionHero />
 
       {/* SECTION 2: WHY JEZTBRAIN */}
-      <WhyJeztBrainGeneral />
+      <SectionWhyJeztBrain />
 
-      {/* SECTION 3: MISSION & VISION */}
+      {/* SECTION 3: THE JEZTBRAIN ECOSYSTEM */}
       <MissionAndVision />
 
-      {/* SECTION 4: SERVICES */}
-      <EnterpriseServices />
+      {/* SECTION 4: EXPERT CONNECT */}
+      <SectionExpertConnect />
 
-      {/* SECTION 7: JEZTBRAINSPIDER */}
+      {/* SECTION 5: JEZTBRAINSPIDER */}
       <JeztBrainSpiderSection />
 
-      {/* SECTION 8: SPIDER PRO */}
-      <div id="spider-pro">
-        <SpiderPro />
-      </div>
+      {/* SECTION 6: SPIDER PRO */}
+      <SpiderPro />
 
-      {/* SECTION 9: WHY CHOOSE JEZTBRAIN */}
-      <WhyJeztBrain />
+      {/* SECTION 7: CYBERSECURITY SERVICES */}
+      <EnterpriseServices />
 
-      {/* SECTION 10: RESEARCH LAB */}
+      {/* SECTION 8: RESEARCH & INNOVATION */}
       <ResearchLab />
 
-      {/* SECTION 13: FAQ */}
-      <FaqSection />
+      {/* SECTION 9: INDUSTRIES WE PROTECT */}
+      <SectionIndustries />
 
-      {/* SECTION 14: CONTACT */}
-      <ContactSection />
+      {/* SECTION 10: WHY ORGANISATIONS TRUST JEZTBRAIN */}
+      <SectionTrustAdvantages />
 
-      {/* SECTION 15: FOOTER */}
+      {/* SECTION 12: CALL TO ACTION */}
+      <SectionFinalCTA />
+
+      {/* FOOTER */}
       <EnterpriseFooter />
 
     </div>

@@ -200,62 +200,61 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-        ? 'py-3 border-b border-[#7B2FF7]/20 shadow-[0_10px_40px_rgba(0,0,0,0.9),0_0_25px_rgba(123,47,247,0.06)] bg-[#0A0F1F]/90 backdrop-blur-xl'
-        : 'py-5 border-b border-transparent bg-transparent'
+        ? 'py-3.5 border-b border-slate-200/80 shadow-sm bg-white/95 backdrop-blur-xl'
+        : 'py-5 border-b border-slate-100/60 bg-white/90 backdrop-blur-md'
         }`}
       onMouseLeave={() => setHoveredMenu(null)}
     >
       <div className="w-full pl-6 lg:pl-10 pr-6 lg:pr-10 flex items-center justify-between gap-6">
 
-        {/* Brand Logo with Soft Cyan Glow */}
+        {/* Brand Logo */}
         <div className="flex items-center shrink-0">
           <Link to="/" className="flex items-center gap-3 group relative">
-            <div className="absolute -inset-2 bg-gradient-to-r from-[#00D4FF]/10 to-[#7B2FF7]/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="relative flex items-center justify-center transition-all duration-300"
             >
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#00D4FF] drop-shadow-[0_0_10px_rgba(0,212,255,0.7)]">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-purple-600">
                 {/* Outer Shield */}
                 <path
                   d="M16 3L6 7v8c0 7 4.5 13.5 10 15 5.5-1.5 10-8 10-15V7L16 3z"
-                  stroke="#00D4FF"
+                  stroke="#7B2FF7"
                   strokeWidth="2"
-                  fill="rgba(0, 212, 255, 0.08)"
+                  fill="rgba(123, 47, 247, 0.08)"
                   strokeLinejoin="round"
                 />
                 {/* Brain Circuit Patterns on Left Side */}
-                <path d="M13 9c-1.5.5-2.5 1.5-2.5 3s1 2.5 2 3" stroke="#00D4FF" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
-                <path d="M11 12h-2.5" stroke="#00D4FF" strokeWidth="1.5" strokeLinecap="round" opacity="0.8" />
-                <circle cx="8" cy="12" r="1" fill="#00D4FF" />
-                <circle cx="10" cy="17" r="1" fill="#00D4FF" />
-                <path d="M13 16.5c-1.5.5-2 1.5-2 2.5" stroke="#00D4FF" strokeWidth="1.5" strokeLinecap="round" opacity="0.8" />
-                <circle cx="11" cy="20" r="1.5" fill="#00D4FF" />
+                <path d="M13 9c-1.5.5-2.5 1.5-2.5 3s1 2.5 2 3" stroke="#7B2FF7" strokeWidth="1.5" strokeLinecap="round" opacity="0.9" />
+                <path d="M11 12h-2.5" stroke="#7B2FF7" strokeWidth="1.5" strokeLinecap="round" opacity="0.8" />
+                <circle cx="8" cy="12" r="1" fill="#7B2FF7" />
+                <circle cx="10" cy="17" r="1" fill="#7B2FF7" />
+                <path d="M13 16.5c-1.5.5-2 1.5-2 2.5" stroke="#7B2FF7" strokeWidth="1.5" strokeLinecap="round" opacity="0.8" />
+                <circle cx="11" cy="20" r="1.5" fill="#7B2FF7" />
                 {/* Brain Circuit Patterns on Right Side */}
-                <path d="M19 9c1.5.5 2 1.5 2 2.5s-0.5 2-1.5 2.5" stroke="#00D4FF" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
+                <path d="M19 9c1.5.5 2 1.5 2 2.5s-0.5 2-1.5 2.5" stroke="#00D4FF" strokeWidth="1.5" strokeLinecap="round" opacity="0.8" />
                 <circle cx="21" cy="15" r="1" fill="#00D4FF" />
-                {/* Stylized Glowing White Letter 'J' in the Center */}
+                {/* Stylized Letter 'J' in Center */}
                 <path
                   d="M15 10h3v10c0 1.66-1.34 3-3 3s-3-1.34-3-3"
-                  stroke="white"
+                  stroke="#00D4FF"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="drop-shadow-[0_0_6px_rgba(255,255,255,0.9)]"
                 />
               </svg>
             </motion.div>
             <div className="flex flex-col">
               <span className="font-black text-xl tracking-tight select-none flex items-center">
-                <span className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">Jezt</span>
-                <span className="text-[#00D4FF] drop-shadow-[0_0_10px_rgba(0,212,255,0.5)] font-extrabold ml-0.5">Brain</span>
+                <span className="text-slate-900">Jezt</span>
+                <span className="text-purple-600 font-extrabold ml-0.5">Brain</span>
               </span>
             </div>
           </Link>
         </div>
 
-        {/* Desktop Nav Links - Perfectly Center Aligned */}
+        {/* Desktop Nav Links - Center Aligned */}
         <div className="hidden lg:flex justify-center items-center gap-8 flex-1">
           {navLinks.map((link) => {
             const isActive = (link.path.startsWith('/#') && activeSection === link.id) ||
@@ -279,40 +278,40 @@ export default function Navbar() {
                   <Link
                     to={link.path}
                     className={`font-mono font-bold text-xs uppercase tracking-[0.15em] flex items-center gap-1.5 transition-all duration-300 py-1 ${isActive
-                        ? 'text-[#7B2FF7] drop-shadow-[0_0_12px_rgba(123,47,247,0.6)]'
-                        : 'text-slate-300 hover:text-[#7B2FF7]'
+                      ? 'text-purple-600'
+                      : 'text-slate-700 hover:text-purple-600'
                       }`}
                   >
                     {link.name}
-                    <ChevronDown size={12} className={`transition-transform duration-300 ${hoveredMenu === 'platform' ? 'rotate-180 text-[#7B2FF7]' : 'text-slate-400'
+                    <ChevronDown size={12} className={`transition-transform duration-300 ${hoveredMenu === 'platform' ? 'rotate-180 text-purple-600' : 'text-slate-400'
                       }`} />
                   </Link>
                 ) : link.path.startsWith('/#') ? (
                   <a
                     href={link.path}
-                    className={`font-mono font-bold text-xs uppercase tracking-[0.15em] flex items-center gap-1.5 transition-all duration-300 py-1 ${isActive ? 'text-[#7B2FF7] drop-shadow-[0_0_12px_rgba(123,47,247,0.6)]' : 'text-slate-300 hover:text-[#7B2FF7]'
+                    className={`font-mono font-bold text-xs uppercase tracking-[0.15em] flex items-center gap-1.5 transition-all duration-300 py-1 ${isActive ? 'text-purple-600' : 'text-slate-700 hover:text-purple-600'
                       }`}
                   >
                     {link.name}
                     {hasMega && (
-                      <ChevronDown size={12} className={`transition-transform duration-300 ${hoveredMenu === link.megaMenuKey ? 'rotate-180 text-[#7B2FF7]' : 'text-slate-400'}`} />
+                      <ChevronDown size={12} className={`transition-transform duration-300 ${hoveredMenu === link.megaMenuKey ? 'rotate-180 text-purple-600' : 'text-slate-400'}`} />
                     )}
                   </a>
                 ) : (
                   <Link
                     to={link.path}
-                    className={`font-mono font-bold text-xs uppercase tracking-[0.15em] flex items-center gap-1.5 transition-all duration-300 py-1 ${isActive ? 'text-[#7B2FF7] drop-shadow-[0_0_12px_rgba(123,47,247,0.6)]' : 'text-slate-300 hover:text-[#7B2FF7]'
+                    className={`font-mono font-bold text-xs uppercase tracking-[0.15em] flex items-center gap-1.5 transition-all duration-300 py-1 ${isActive ? 'text-purple-600' : 'text-slate-700 hover:text-purple-600'
                       }`}
                   >
                     {link.name}
                     {hasMega && (
-                      <ChevronDown size={12} className={`transition-transform duration-300 ${hoveredMenu === link.megaMenuKey ? 'rotate-180 text-[#7B2FF7]' : 'text-slate-400'}`} />
+                      <ChevronDown size={12} className={`transition-transform duration-300 ${hoveredMenu === link.megaMenuKey ? 'rotate-180 text-purple-600' : 'text-slate-400'}`} />
                     )}
                   </Link>
                 )}
 
-                {/* Underline indicator - Solid purple */}
-                <span className={`absolute bottom-0 left-0 h-[2px] bg-[#7B2FF7] shadow-[0_0_8px_rgba(123,47,247,0.8)] transition-all duration-300 ${isActive ? 'w-full' : 'w-0'
+                {/* Underline indicator */}
+                <span className={`absolute bottom-0 left-0 h-[2px] bg-purple-600 transition-all duration-300 ${isActive ? 'w-full' : 'w-0'
                   }`} />
               </div>
             );
@@ -327,16 +326,15 @@ export default function Navbar() {
             <div className="flex items-center gap-6">
               <Link
                 to="/auth"
-                className="font-mono text-xs font-bold uppercase tracking-widest text-slate-300 hover:text-[#7B2FF7] transition-colors relative group py-2 whitespace-nowrap"
+                className="font-mono text-xs font-bold uppercase tracking-widest text-slate-700 hover:text-purple-600 transition-colors relative group py-2 whitespace-nowrap"
               >
                 LOGIN
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#7B2FF7] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-600 transition-all duration-300 group-hover:w-full" />
               </Link>
               <Link
                 to="/auth?signup=true"
-                className="relative group inline-flex items-center justify-center bg-gradient-to-r from-[#7B2FF7] to-[#00D4FF] text-white px-6 py-2.5 rounded-lg font-black font-mono text-[11px] uppercase tracking-widest shadow-[0_0_20px_rgba(123,47,247,0.3)] hover:shadow-[0_0_35px_rgba(123,47,247,0.6)] transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap border border-white/10 hover:border-white/20"
+                className="relative group inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-6 py-2.5 rounded-lg font-black font-mono text-[11px] uppercase tracking-widest shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap"
               >
-                <div className="absolute inset-0 rounded-lg bg-white/10 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
                 <span className="relative z-10 flex items-center gap-2">
                   GET STARTED
                 </span>

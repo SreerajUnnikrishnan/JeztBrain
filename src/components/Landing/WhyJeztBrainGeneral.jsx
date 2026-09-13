@@ -90,9 +90,9 @@ export default function WhyJeztBrainGeneral() {
 
       {/* Full-width background image with overlays */}
       <div className="absolute inset-0 w-full h-full z-0 select-none pointer-events-none">
-        <img 
-          src="/images/cybersecurity_servers_hd.png" 
-          alt="JeztBrain Cybersecurity AI Analysis & Servers" 
+        <img
+          src="/images/cybersecurity_servers_hd.png"
+          alt="JeztBrain Cybersecurity AI Analysis & Servers"
           className="w-full h-full object-cover object-center contrast-[1.08] brightness-[1.10]"
           style={{ imageRendering: 'high-quality' }}
         />

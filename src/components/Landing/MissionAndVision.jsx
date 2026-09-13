@@ -1,399 +1,324 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, BarChart3, Users, Shield, Cpu, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain, Search, ShieldCheck, UserCheck, LayoutDashboard, Shield,
+  ArrowRight, CheckCircle2, Zap, Activity, Radio, Cpu
+} from 'lucide-react';
 
 export default function MissionAndVision() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const ecosystemItems = [
+  
+  // Section B: 6 Core Capabilities
+  const coreCapabilities = [
     {
+      title: "AI Threat Intelligence",
+      desc: "Analyze security signals and identify potential cyber threats in real-time.",
       icon: Brain,
-      emoji: "🧠",
-      title: "JeztBrainSpider",
-      subtitle: "Core AI Intelligence Engine",
-      description: "The core automated intelligence engine that continuously parses global security telemetry, runs threat correlation models, and automates early triage tasks.",
-      color: "from-purple-600 to-indigo-600",
-      glow: "rgba(123, 47, 247, 0.4)",
-      nodeX: 50,
-      nodeY: 10,
+      color: "text-blue-600",
+      bg: "bg-blue-50 border-blue-100",
+      link: "/platform/jeztbrainspider"
     },
     {
-      icon: BarChart3,
-      emoji: "📊",
-      title: "Spider Pro",
-      subtitle: "Enterprise Security Dashboard",
-      description: "Single-pane visibility across your entire security posture, presenting real-time telemetry, threat levels, and active containment controls.",
-      color: "from-blue-600 to-cyan-600",
-      glow: "rgba(59, 130, 246, 0.4)",
-      nodeX: 88,
-      nodeY: 38,
+      title: "Incident Investigation",
+      desc: "Support security investigations with structured analysis and evidence-based insights.",
+      icon: Search,
+      color: "text-indigo-600",
+      bg: "bg-indigo-50 border-indigo-100",
+      link: "/platform/jeztbrainspider"
     },
     {
-      icon: Users,
-      emoji: "👨‍💻",
-      title: "Expert Connect",
-      subtitle: "Verified Cybersecurity Experts",
-      description: "On-demand access to verified elite-tier threat analysts, incident handlers, and cybersecurity consultants to investigate and resolve anomalies.",
-      color: "from-emerald-600 to-teal-600",
-      glow: "rgba(16, 185, 129, 0.4)",
-      nodeX: 73,
-      nodeY: 80,
+      title: "Rapid Incident Response",
+      desc: "Help teams coordinate containment and recovery activities within guaranteed SLAs.",
+      icon: ShieldCheck,
+      color: "text-purple-600",
+      bg: "bg-purple-50 border-purple-100",
+      link: "/chat"
     },
     {
+      title: "Cybersecurity Expert Connect",
+      desc: "Connect users with verified cybersecurity professionals for live incident triage.",
+      icon: UserCheck,
+      color: "text-cyan-600",
+      bg: "bg-cyan-50 border-cyan-100",
+      link: "/experts"
+    },
+    {
+      title: "Enterprise Security Dashboard",
+      desc: "Provide a centralized view of security activities, telemetry feeds, and threat insights.",
+      icon: LayoutDashboard,
+      color: "text-emerald-600",
+      bg: "bg-emerald-50 border-emerald-100",
+      link: "/dashboard"
+    },
+    {
+      title: "Proactive Digital Protection",
+      desc: "Strengthen security awareness, monitoring, and proactive defensive security practices.",
       icon: Shield,
-      emoji: "🛡️",
-      title: "Incident Response",
-      subtitle: "Investigation & Recovery",
-      description: "Active playbooks, containment procedures, and complete digital forensics services to quickly isolate breaches and restore critical infrastructure.",
-      color: "from-red-600 to-orange-600",
-      glow: "rgba(239, 68, 68, 0.4)",
-      nodeX: 27,
-      nodeY: 80,
-    },
-    {
-      icon: Cpu,
-      emoji: "🤖",
-      title: "AI Intelligence",
-      subtitle: "Smart Threat Detection",
-      description: "Adaptive ML algorithms that construct behavioral profiles, flag zero-day activity, and provide autonomous prevention measures at speed.",
-      color: "from-amber-600 to-yellow-600",
-      glow: "rgba(245, 158, 11, 0.4)",
-      nodeX: 12,
-      nodeY: 38,
+      color: "text-rose-600",
+      bg: "bg-rose-50 border-rose-100",
+      link: "/platform/jeztbrainspider"
     }
   ];
 
-  // Auto-rotate items for ambient visual interest, but pause when user interacts
-  const [isPaused, setIsPaused] = useState(false);
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % ecosystemItems.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
+  // Section C: How JeztBrain Works 4 Steps
+  const steps = [
+    {
+      num: "01",
+      title: "Detect",
+      desc: "Identify suspicious activity, anomalous behaviors, and potential cyber threats instantly across endpoints and network telemetry.",
+      icon: Radio
+    },
+    {
+      num: "02",
+      title: "Analyze",
+      desc: "Understand the nature, scope, and potential impact of security incidents using AI heuristic intelligence and correlation engines.",
+      icon: Cpu
+    },
+    {
+      num: "03",
+      title: "Respond",
+      desc: "Coordinate appropriate incident response actions with verified human experts to isolate threats and contain breaches rapidly.",
+      icon: Zap
+    },
+    {
+      num: "04",
+      title: "Strengthen",
+      desc: "Improve overall digital protection posture, apply patch remediations, and reduce future risk exposure across your enterprise.",
+      icon: ShieldCheck
+    }
+  ];
 
   return (
-    <section className="relative w-full min-h-[920px] flex items-center justify-center text-slate-800 overflow-hidden py-24 md:py-32 font-sans border-b border-slate-100 bg-white">
+    <section className="relative w-full bg-white text-slate-900 py-24 lg:py-32 font-sans border-b border-slate-200 overflow-hidden">
       
-      {/* ── Background Image Layer ── */}
-      <div className="absolute inset-0 z-0 select-none pointer-events-none">
-        <img
-          src="/images/ecosystem_bg.png"
-          alt="JeztBrain Ecosystem clean abstract modern background"
-          className="w-full h-full object-cover object-center"
-        />
-        {/* Soft realistic light gradient overlay for readability & blending */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/95 via-white/85 to-blue-50/20 z-10" />
+      {/* Container */}
+      <div className="max-w-[1320px] mx-auto px-6 lg:px-12 relative z-20 w-full space-y-28">
         
-        {/* Soft abstract ambient glow circles */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-indigo-200/20 blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-blue-200/20 blur-3xl" />
-      </div>
-
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          
-          {/* ── LEFT COLUMN: Text Content & Interactive List ── */}
-          <div className="lg:col-span-6 space-y-8 text-left">
-            
-            {/* Small Label */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#7B2FF7]/10 text-[#7B2FF7] text-xs font-mono font-bold tracking-wider uppercase border border-[#7B2FF7]/20 shadow-sm animate-pulse">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#7B2FF7]" />
-              THE JEZTBRAIN ECOSYSTEM
-            </div>
-
-            {/* Heading */}
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#0B1020] tracking-tight leading-none font-space-grotesk">
-                Constructing the Future of <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#7B2FF7] to-[#9333EA]">
-                  Active Digital Defense.
-                </span>
-              </h2>
-              
-              {/* Subheading */}
-              <p className="text-slate-700 font-medium text-lg md:text-xl font-sora leading-relaxed max-w-2xl">
-                One intelligent ecosystem that combines AI, cybersecurity experts, and enterprise technologies to deliver faster, smarter, and more effective cyber protection.
-              </p>
-            </div>
-
-            {/* Brief Content */}
-            <p className="text-slate-500 text-sm md:text-base leading-relaxed font-light max-w-2xl">
-              JeztBrain unifies AI-powered intelligence, verified cybersecurity experts, and advanced security platforms into one connected ecosystem. Every component works together to detect threats, support investigations, strengthen defenses, and accelerate incident response for individuals, businesses, and enterprises.
-            </p>
-
-            {/* Interactive Ecosystem List */}
-            <div className="space-y-3 mt-8">
-              {ecosystemItems.map((item, idx) => {
-                const IconComponent = item.icon;
-                const isActive = activeIndex === idx;
-                
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      setActiveIndex(idx);
-                      setIsPaused(true);
-                    }}
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
-                    className={`w-full flex items-center gap-4 p-4 rounded-xl border text-left transition-all duration-300 ${
-                      isActive
-                        ? "bg-white border-[#7B2FF7] shadow-lg shadow-indigo-100/50 translate-x-2"
-                        : "bg-white/40 border-slate-200/60 hover:bg-white/70 hover:border-slate-300"
-                    }`}
-                  >
-                    {/* Icon container */}
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
-                      isActive
-                        ? `bg-gradient-to-br ${item.color} text-white shadow-md`
-                        : "bg-slate-100 text-slate-500"
-                    }`}>
-                      <IconComponent size={22} className={isActive ? "animate-pulse" : ""} />
-                    </div>
-
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg leading-none" role="img" aria-label={item.title}>{item.emoji}</span>
-                        <h3 className={`text-base font-bold font-space-grotesk tracking-tight ${
-                          isActive ? "text-[#7B2FF7]" : "text-slate-900"
-                        }`}>
-                          {item.title}
-                        </h3>
-                      </div>
-                      <p className="text-xs text-slate-400 font-mono tracking-wide mt-0.5">
-                        {item.subtitle}
-                      </p>
-                    </div>
-
-                    <ArrowRight size={16} className={`text-slate-300 transition-all duration-300 ${
-                      isActive ? "text-[#7B2FF7] translate-x-1" : "opacity-0"
-                    }`} />
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Bottom Statement */}
-            <div className="pt-6 border-t border-slate-100 flex items-center gap-3">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#7B2FF7] animate-ping shrink-0" />
-              <p className="text-[#7B2FF7] font-extrabold text-sm tracking-wider uppercase font-mono">
-                One ecosystem. One platform. Unlimited cyber protection.
-              </p>
-            </div>
-
+        {/* Page Section Header */}
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100 text-purple-700 text-xs font-mono font-bold tracking-wider uppercase">
+            CORE PLATFORM ARCHITECTURE
           </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            Transform the Way You Respond to Cyber Threats.
+          </h2>
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed font-normal">
+            From intelligent threat detection to expert-led incident response, JeztBrain helps security teams understand threats, take action, and strengthen their defenses through one connected cybersecurity ecosystem.
+          </p>
+        </div>
 
-          {/* ── RIGHT COLUMN: Animated 3D Ecosystem Node Network ── */}
-          <div className="lg:col-span-6 flex items-center justify-center relative min-h-[500px]">
-            
-            {/* Ambient Glowing Web Network Graphic in background of the core */}
-            <div className="absolute w-[480px] h-[480px] rounded-full bg-gradient-to-tr from-indigo-300/10 to-purple-300/10 blur-xl pointer-events-none" />
-
-            {/* The Main Interaction Diagram Area */}
-            <div className="relative w-[460px] h-[460px] flex items-center justify-center select-none">
+        {/* ── SECTION A: PLATFORM OVERVIEW ── */}
+        <div className="space-y-8">
+          <div className="p-8 lg:p-12 rounded-3xl bg-slate-50 border border-slate-200 shadow-sm space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
-              {/* SVG Connecting Lines Layer */}
-              <svg className="absolute inset-0 w-full h-full z-0 pointer-events-none" viewBox="0 0 100 100">
-                <defs>
-                  {/* Glowing Filter effects */}
-                  <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
-                    <feGaussianBlur stdDeviation="1.5" result="blur" />
-                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                  </filter>
-                </defs>
+              <div className="lg:col-span-6 space-y-4 text-left">
+                <span className="text-xs font-mono font-bold text-blue-600 uppercase tracking-wider block">SECTION A // PLATFORM OVERVIEW</span>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                  Comprehensive Cyber Threat Monitoring & Rapid Response
+                </h3>
+                <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                  JeztBrain aggregates complex telemetry signals into actionable security intelligence. By combining automated AI detection algorithms with certified human handlers, security risks are identified and contained before business impact occurs.
+                </p>
+              </div>
 
-                {ecosystemItems.map((item, idx) => {
-                  const isActive = activeIndex === idx;
-                  return (
-                    <g key={idx}>
-                      {/* Connection Line */}
-                      <motion.line
-                        x1="50"
-                        y1="50"
-                        x2={item.nodeX}
-                        y2={item.nodeY}
-                        stroke={isActive ? "url(#line-glow-grad)" : "rgba(203, 213, 225, 0.4)"}
-                        strokeWidth={isActive ? "0.8" : "0.4"}
-                        strokeDasharray={isActive ? "2, 1" : "none"}
-                        animate={isActive ? { strokeDashoffset: [0, -10] } : {}}
-                        transition={isActive ? { repeat: Infinity, duration: 4, ease: "linear" } : {}}
-                      />
-                      
-                      {/* Interactive Pulse Flow packet */}
-                      {isActive && (
-                        <motion.circle
-                          cx="50"
-                          cy="50"
-                          r="1"
-                          fill="#7B2FF7"
-                          filter="url(#glow-effect)"
-                          animate={{
-                            cx: [50, item.nodeX],
-                            cy: [50, item.nodeY],
-                            r: [0.5, 1.2, 0.5]
-                          }}
-                          transition={{
-                            repeat: Infinity,
-                            duration: 2,
-                            ease: "easeInOut"
-                          }}
-                        />
-                      )}
-                    </g>
-                  );
-                })}
-
-                {/* Line glow gradient definitions */}
-                <linearGradient id="line-glow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#7B2FF7" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#9333EA" stopOpacity="1" />
-                </linearGradient>
-              </svg>
-
-              {/* ── Central AI Core Module (JeztBrainSpider Core) ── */}
-              <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                  rotate: 360
-                }}
-                transition={{
-                  y: { repeat: Infinity, duration: 5, ease: "easeInOut" },
-                  rotate: { repeat: Infinity, duration: 120, ease: "linear" }
-                }}
-                className="absolute w-44 h-44 z-10 flex items-center justify-center cursor-pointer"
-                onClick={() => {
-                  setActiveIndex(0);
-                  setIsPaused(true);
-                }}
-              >
-                {/* Glowing Outer Ring */}
-                <div 
-                  className="absolute inset-0 rounded-full border border-dashed border-[#7B2FF7]/40 p-2" 
-                  style={{ animation: 'spin 25s linear infinite' }}
-                />
-                <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-[#7B2FF7]/10 to-[#9333EA]/10 blur-xl animate-pulse" />
-                
-                {/* Core 3D image representation */}
-                <img
-                  src="/images/ecosystem_core.png"
-                  alt="JeztBrain AI Core"
-                  className="w-28 h-28 object-contain relative z-20 hover:scale-105 transition-transform duration-300"
-                />
-                
-                {/* Glassmorphic Core Badge */}
-                <div className="absolute bottom-2 bg-slate-900/90 text-white border border-white/10 px-2 py-0.5 rounded-full text-[9px] font-mono tracking-widest uppercase scale-90 z-30 shadow-md">
-                  AI CORE
-                </div>
-              </motion.div>
-
-              {/* ── Surrounding Interactive Module Nodes ── */}
-              {ecosystemItems.map((item, idx) => {
-                const IconComponent = item.icon;
-                const isActive = activeIndex === idx;
-
-                return (
-                  <div
-                    key={idx}
-                    className="absolute cursor-pointer transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 z-20"
-                    style={{
-                      left: `${item.nodeX}%`,
-                      top: `${item.nodeY}%`,
-                    }}
-                    onClick={() => {
-                      setActiveIndex(idx);
-                      setIsPaused(true);
-                    }}
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
-                  >
-                    {/* Ring pulsing outer glow for the active node */}
-                    <AnimatePresence>
-                      {isActive && (
-                        <motion.div
-                          layoutId="activeGlowRing"
-                          className="absolute -inset-4 rounded-full blur-md"
-                          style={{ backgroundColor: item.glow }}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1.2 }}
-                          exit={{ opacity: 0, scale: 0.8 }}
-                          transition={{ duration: 0.3 }}
-                        />
-                      )}
-                    </AnimatePresence>
-
-                    {/* Node Core Body */}
-                    <motion.div
-                      whileHover={{ scale: 1.15 }}
-                      className={`w-14 h-14 rounded-full flex items-center justify-center border relative transition-all duration-300 ${
-                        isActive
-                          ? `bg-gradient-to-br ${item.color} text-white border-transparent shadow-lg shadow-indigo-200`
-                          : "bg-white text-slate-600 border-slate-200/80 shadow-sm hover:border-slate-300"
-                      }`}
-                    >
-                      <IconComponent size={20} />
-
-                      {/* Small Indicator active Dot */}
-                      {isActive && (
-                        <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-green-400"></span>
-                        </span>
-                      )}
-                    </motion.div>
-
-                    {/* Node Label Tooltip-Style */}
-                    <div className={`absolute left-1/2 -translate-x-1/2 mt-2 px-3 py-1 rounded-lg border bg-white shadow-md text-[10px] font-bold font-space-grotesk whitespace-nowrap transition-all duration-300 pointer-events-none ${
-                      isActive
-                        ? "text-[#7B2FF7] border-[#7B2FF7]/20 scale-100 opacity-100"
-                        : "text-slate-500 border-slate-100 scale-90 opacity-70 group-hover:opacity-100"
-                    }`}>
-                      {item.title}
-                    </div>
-                  </div>
-                );
-              })}
-
-            </div>
-
-            {/* ── Active Module Description Card Floating (Shown at bottom center under diagram) ── */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-full max-w-[380px] z-30">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-white/95 backdrop-blur-md border border-slate-200/80 p-5 rounded-2xl shadow-xl flex flex-col gap-2"
-                >
-                  <div className="flex items-center justify-between border-b border-slate-100 pb-2">
-                    <div className="flex items-center gap-2">
-                      <span className="text-base">{ecosystemItems[activeIndex].emoji}</span>
-                      <h4 className="text-xs font-bold font-mono text-slate-400 uppercase tracking-widest">
-                        Ecosystem Component
-                      </h4>
-                    </div>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-50 text-[#7B2FF7] border border-indigo-100">
-                      0{activeIndex + 1} / 05
+              {/* Illustration Card Diagram */}
+              <div className="lg:col-span-6">
+                <div className="relative rounded-2xl bg-white p-6 border border-slate-200 shadow-md space-y-4">
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                    <span className="text-xs font-mono font-bold text-slate-800">JEZTBRAIN TELEMETRY STREAM</span>
+                    <span className="flex items-center gap-1.5 text-[10px] font-mono font-bold text-emerald-600">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" /> 100% OPERATIONAL
                     </span>
                   </div>
-                  
-                  <h3 className="text-base font-extrabold text-[#0B1020] font-space-grotesk">
-                    {ecosystemItems[activeIndex].title}
-                  </h3>
-                  
-                  <p className="text-xs text-slate-500 leading-relaxed font-light">
-                    {ecosystemItems[activeIndex].description}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
+                  <div className="grid grid-cols-3 gap-3 text-center">
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-left">
+                      <span className="text-[10px] font-mono text-slate-400 font-bold block">EVENTS/SEC</span>
+                      <span className="text-sm font-bold font-mono text-blue-600">142,800</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-left">
+                      <span className="text-[10px] font-mono text-slate-400 font-bold block">CONTAINMENT</span>
+                      <span className="text-sm font-bold font-mono text-purple-600">&lt; 15 mins</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-left">
+                      <span className="text-[10px] font-mono text-slate-400 font-bold block">VERIFIED EXPERTS</span>
+                      <span className="text-sm font-bold font-mono text-indigo-600">200+ Responders</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* 3 Supporting Feature Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-200">
+              <div className="flex items-center gap-3 text-left">
+                <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold shrink-0">
+                  <Activity className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-slate-900">Real-Time Telemetry</h4>
+                  <p className="text-xs text-slate-500">Continuous cloud & endpoint signal analysis.</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 text-left">
+                <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold shrink-0">
+                  <Brain className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-slate-900">Heuristic Detection</h4>
+                  <p className="text-xs text-slate-500">Zero-day anomaly identification engine.</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 text-left">
+                <div className="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold shrink-0">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-slate-900">Automated Containment</h4>
+                  <p className="text-xs text-slate-500">Instant isolation of compromised assets.</p>
+                </div>
+              </div>
             </div>
 
           </div>
-
         </div>
+
+        {/* ── SECTION B: OUR CORE CAPABILITIES (6 GRID CARDS) ── */}
+        <div className="space-y-10">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-mono font-bold text-indigo-600 uppercase tracking-wider">SECTION B // CORE CAPABILITIES</span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Built for Modern Security Challenges</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {coreCapabilities.map((cap, idx) => {
+              const Icon = cap.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -5 }}
+                  className="p-8 rounded-3xl bg-slate-50/70 hover:bg-white border border-slate-200 shadow-sm hover:shadow-xl transition-all text-left flex flex-col justify-between space-y-6 group"
+                >
+                  <div className="space-y-4">
+                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border ${cap.bg}`}>
+                      <Icon className={`w-6 h-6 ${cap.color}`} />
+                    </div>
+                    <h4 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      {cap.title}
+                    </h4>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                      {cap.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-2 border-t border-slate-100">
+                    <Link
+                      to={cap.link}
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-blue-600 hover:text-blue-700 transition-colors uppercase tracking-wider"
+                    >
+                      Learn More <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ── SECTION C: HOW JEZTBRAIN WORKS (PROCESS WORKFLOW TIMELINE) ── */}
+        <div className="space-y-12">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-mono font-bold text-cyan-600 uppercase tracking-wider">SECTION C // WORKFLOW PROCESS</span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">How JeztBrain Protects Your Operations</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+            {steps.map((st, idx) => {
+              const Icon = st.icon;
+              return (
+                <div key={idx} className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-sm text-left space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-3xl font-black font-mono text-slate-300">{st.num}</span>
+                    <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700">
+                      <Icon className="w-5 h-5 text-blue-600" />
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-bold text-slate-900">{st.title}</h4>
+                  <p className="text-xs text-slate-600 leading-relaxed font-normal">{st.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ── SECTION D: CYBERSECURITY ECOSYSTEM RELATIONSHIP MATRIX ── */}
+        <div className="space-y-10">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-mono font-bold text-purple-600 uppercase tracking-wider">SECTION D // ECOSYSTEM MATRIX</span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Connected Defense Ecosystem</h3>
+          </div>
+
+          <div className="p-8 lg:p-12 rounded-3xl bg-slate-50 border border-slate-200 shadow-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-3">
+                <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-mono font-bold">NODE 01</span>
+                <h4 className="text-base font-bold text-slate-900">AI Intelligence</h4>
+                <p className="text-xs text-slate-500">Autonomous pattern recognition & anomaly triage.</p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-3">
+                <span className="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-[10px] font-mono font-bold">NODE 02</span>
+                <h4 className="text-base font-bold text-slate-900">Incident Response</h4>
+                <p className="text-xs text-slate-500">Rapid containment, evidence analysis & recovery.</p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-3">
+                <span className="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 text-[10px] font-mono font-bold">NODE 03</span>
+                <h4 className="text-base font-bold text-slate-900">Cybersecurity Experts</h4>
+                <p className="text-xs text-slate-500">200+ Verified Tier-3 incident response handlers.</p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-3">
+                <span className="px-3 py-1 rounded-full bg-cyan-100 text-cyan-700 text-[10px] font-mono font-bold">NODE 04</span>
+                <h4 className="text-base font-bold text-slate-900">Enterprise Security</h4>
+                <p className="text-xs text-slate-500">Centralized posture monitoring & compliance.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {/* ── SECTION E: CALL TO ACTION ── */}
+        <div className="rounded-3xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 p-10 lg:p-16 text-white text-center space-y-8 shadow-xl shadow-blue-500/20 relative overflow-hidden">
+          <div className="relative z-10 max-w-2xl mx-auto space-y-4">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-200">GET STARTED WITH JEZTBRAIN</span>
+            <h3 className="text-3xl sm:text-4xl font-black tracking-tight">
+              Ready to Strengthen Your Digital Defense?
+            </h3>
+            <p className="text-blue-100 text-base leading-relaxed">
+              Explore JeztBrain and discover a smarter way to understand, manage, and respond to cybersecurity threats.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+              <Link
+                to="/platform/jeztbrainspider"
+                className="px-8 py-4 bg-white text-blue-700 hover:bg-slate-50 font-bold font-mono text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all"
+              >
+                Explore Platform
+              </Link>
+              <Link
+                to="/chat"
+                className="px-8 py-4 bg-blue-700/60 hover:bg-blue-700 border border-white/20 text-white font-bold font-mono text-xs uppercase tracking-wider rounded-xl transition-all"
+              >
+                Connect With an Expert
+              </Link>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -46,6 +46,45 @@ export function writeDb(data) {
   }
 }
 
+function matchesFilter(row, filter) {
+  const rowVal = row[filter.field];
+  if (filter.type === 'eq') {
+    return String(rowVal) === String(filter.value);
+  } else if (filter.type === 'neq') {
+    return String(rowVal) !== String(filter.value);
+  } else if (filter.type === 'in') {
+    const vals = Array.isArray(filter.value) ? filter.value : [filter.value];
+    return vals.map(String).includes(String(rowVal));
+  } else if (filter.type === 'ilike' || filter.type === 'like') {
+    const val = String(rowVal || '').toLowerCase();
+    const pattern = String(filter.value || '').replace(/%/g, '').toLowerCase();
+    return val.includes(pattern);
+  } else if (filter.type === 'gte') {
+    return rowVal >= filter.value;
+  } else if (filter.type === 'lte') {
+    return rowVal <= filter.value;
+  } else if (filter.type === 'gt') {
+    return rowVal > filter.value;
+  } else if (filter.type === 'lt') {
+    return rowVal < filter.value;
+  } else if (filter.type === 'or') {
+    if (!filter.value) return true;
+    const subConditions = String(filter.value).split(',');
+    return subConditions.some(cond => {
+      const parts = cond.trim().split('.');
+      if (parts.length >= 3) {
+        const f = parts[0];
+        const op = parts[1];
+        const v = parts.slice(2).join('.');
+        if (op === 'eq') return String(row[f]) === String(v);
+        if (op === 'neq') return String(row[f]) !== String(v);
+      }
+      return false;
+    });
+  }
+  return true;
+}
+
 export function runDbQuery(builder) {
   const db = readDb();
   const tableName = builder.tableName;
@@ -60,15 +99,7 @@ export function runDbQuery(builder) {
   if (builder.operation === 'select') {
     let temp = [...tableData];
     for (const filter of builder.filters) {
-      temp = temp.filter(row => {
-        const rowVal = row[filter.field];
-        if (filter.type === 'eq') {
-          return String(rowVal) === String(filter.value);
-        } else if (filter.type === 'neq') {
-          return String(rowVal) !== String(filter.value);
-        }
-        return true;
-      });
+      temp = temp.filter(row => matchesFilter(row, filter));
     }
 
     if (builder.orderBy) {
@@ -103,15 +134,7 @@ export function runDbQuery(builder) {
   } else if (builder.operation === 'update') {
     const updatedRows = [];
     tableData.forEach((row, idx) => {
-      let matches = true;
-      for (const filter of builder.filters) {
-        const rowVal = row[filter.field];
-        if (filter.type === 'eq') {
-          if (String(rowVal) !== String(filter.value)) matches = false;
-        } else if (filter.type === 'neq') {
-          if (String(rowVal) === String(filter.value)) matches = false;
-        }
-      }
+      const matches = builder.filters.every(filter => matchesFilter(row, filter));
       if (matches) {
         const updatedRow = {
           ...row,
@@ -127,15 +150,7 @@ export function runDbQuery(builder) {
   } else if (builder.operation === 'delete') {
     const keptRows = [];
     tableData.forEach(row => {
-      let matches = true;
-      for (const filter of builder.filters) {
-        const rowVal = row[filter.field];
-        if (filter.type === 'eq') {
-          if (String(rowVal) !== String(filter.value)) matches = false;
-        } else if (filter.type === 'neq') {
-          if (String(rowVal) === String(filter.value)) matches = false;
-        }
-      }
+      const matches = builder.filters.every(filter => matchesFilter(row, filter));
       if (matches) {
         affectedRows.push(row);
       } else {
@@ -225,6 +240,46 @@ class QueryBuilder {
 
   neq(field, value) {
     this.filters.push({ field, value, type: 'neq' });
+    return this;
+  }
+
+  or(value) {
+    this.filters.push({ field: null, value, type: 'or' });
+    return this;
+  }
+
+  in(field, value) {
+    this.filters.push({ field, value, type: 'in' });
+    return this;
+  }
+
+  ilike(field, value) {
+    this.filters.push({ field, value, type: 'ilike' });
+    return this;
+  }
+
+  like(field, value) {
+    this.filters.push({ field, value, type: 'like' });
+    return this;
+  }
+
+  gte(field, value) {
+    this.filters.push({ field, value, type: 'gte' });
+    return this;
+  }
+
+  lte(field, value) {
+    this.filters.push({ field, value, type: 'lte' });
+    return this;
+  }
+
+  gt(field, value) {
+    this.filters.push({ field, value, type: 'gt' });
+    return this;
+  }
+
+  lt(field, value) {
+    this.filters.push({ field, value, type: 'lt' });
     return this;
   }
 

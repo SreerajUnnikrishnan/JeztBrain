@@ -42,7 +42,12 @@ export default function ReportIncident() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (isSubmitting || !user?.id) return;
+    if (isSubmitting) return;
+    if (!user?.id) {
+      toast.error('Authentication required to dispatch SOC incident. Redirecting to login...');
+      navigate('/auth');
+      return;
+    }
 
     setIsSubmitting(true);
     const loadingToast = toast.loading('Initializing SOC Uplink...');
